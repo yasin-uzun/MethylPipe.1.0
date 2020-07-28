@@ -14,7 +14,16 @@ Once you have installed the MethylPipe package, verify that it is installed corr
 library(MethylPipe)
 test()
 ```
-If MethylPipe is installed without problems, you should see the following message:
+If MethylPipe is installed without any problems, you should see the following message:
 > \[1\] "MethylPipe works ok."
 
+## Dependencies 
+
+To run MethylPipe, you need to have the underlying software:
+* Adapter Trimmer: Cutadapt or 
+* Aligner: Bismark or BSMAP or BS3
+* Duplicate removal: samtools or picard
+* Demultiplexer: demultiplex_fastq.pl perl script, implemented by us.
+
+You also need genomic sequence and annotated genomic regions for quantification of methylation calls. 
 
