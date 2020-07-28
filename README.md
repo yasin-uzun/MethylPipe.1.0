@@ -20,7 +20,7 @@ If MethylPipe is installed without any problems, you should see the following me
 ## Dependencies 
 
 To run MethylPipe, you need to have the underlying software:
-* Adapter Trimmer: Cutadapt or 
+* Adapter Trimmer: Cutadapt or TrimGalor or Trimmomatic 
 * Aligner: Bismark (with Bowtie) or BSMAP or BS3
 * Duplicate removal: samtools or picard
 * Demultiplexer: demultiplex_fastq.pl perl script (see below).
