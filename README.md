@@ -35,8 +35,15 @@ You also need genomic sequence and annotated genomic regions for quantification 
 
 ## Configuration
 
+To run MethylPipe, you need three configuration files to modify:
+* config.general.R : Sets the progam paths to be used by MethylPipe. You need to edit this file only once.
+* config.genome.R : Sets the genomic information and paths to be used by MethylPipe. You need to generate one for each organism. We provide the built-in configuration by hg38.
+* config.project.R : You need to configure this file for each of your project.
+
+You can download the templates for the configuration files from [here](https://chopri.box.com/s/rkqnwx4ck7larpthluyxse4hi8quypk0) and edit them for your purposes.
 
 ## Running
+
 
 
 ## Citation
