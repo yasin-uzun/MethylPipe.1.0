@@ -14,7 +14,7 @@ Once you have installed the MethylPipe package, verify that it is installed corr
 library(MethylPipe)
 MethylPipe::test()
 ```
-If MethylPipe is installed without any problems, you should see the following message:
+If MethylPipe is installed without any problems, you should see the following message:\n
 `MethylPipe installation is ok.`
 
 ## Dependencies 
