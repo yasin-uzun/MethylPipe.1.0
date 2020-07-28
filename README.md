@@ -8,7 +8,7 @@ To install MAPLE, install vioplot first:
 install.packages("vioplot")
 ```
 
-type the following commands in R command prompt:
+Then type the following commands in R command prompt:
 ```R
 library(devtools)
 install_github("yasin-uzun/MethylPipe.1.0")
