@@ -49,18 +49,21 @@ MethylPipe is run in two steps:
 ```R
 read_configs(config_dir)
 ```
-`<config_dir>` should point to your configuration file directory (mentioned above). 
+`config_dir` should point to your configuration file directory (mentioned above). 
 
 2. Process data:
 ```R
 process_sample_wrapper(raw_fastq_dir, demux_index_file, working_dir, sample_name)
 ```
-* `<raw_fastq_dir>` should point to the directory containing fastq files as the input. 
-* `<demux_index_file>` should point to the demultiplexing index for the fastq files. 
-* `<working_dir>` should point to the directory where all the outputs will be placed into. 
-* `<sample_name>` (optional) is the name for the sample or project.
+* `raw_fastq_dir` should point to the directory containing fastq files as the input. 
+* `demux_index_file` should point to the demultiplexing index for the fastq files. 
+* `working_dir` should point to the directory where all the outputs will be placed into. 
+* `sample_name` (optional) is the name for the sample or project.
 
-This function reads fastq files, demultiplexes them into single cells, performs filtering, mapping (alignment), DNA methylation calling  and quantification, dimensionality reduction, clustering and differential methylation analysis for the given input. All the outputs are placed into related directories in `<working_dir>`.
+This function reads fastq files, demultiplexes them into single cells, performs filtering, mapping (alignment), DNA methylation calling  and quantification, dimensionality reduction, clustering and differential methylation analysis for the given input. All the outputs are placed into related directories in `working_dir`.
+
+## Example Data
+To try MethylPipe with some example data, please contact the authors (see below). 
 
 ## Citation
 If you use MethylPipe in your study, please cite it as follows: MethylPipe: Single Cell DNA Methylation Data Processing Pipeline, GitHub, 2020. 
