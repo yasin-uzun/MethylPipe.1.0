@@ -26,5 +26,3 @@ Imports:
   dplyr,
   GenomicRanges,
   parallel
-Suggests:
-  reticulate
