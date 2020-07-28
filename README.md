@@ -1,4 +1,4 @@
-# MethylPipe.1.0 Single Cell DNA Methylation Data Processing Pipeline
+# MethylPipe.1.0: Single Cell DNA Methylation Data Processing Pipeline
 
 MethylPipe is an R package for processing single cell DNA methylation data. It accepts fastq files as input, performs demultiplexing, adapter trimmming, mapping, quantification, dimensionality reduction and differential methylation analysis for single cell DNA methylation datasets.
 
