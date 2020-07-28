@@ -11,6 +11,7 @@ LazyData: true
 biocViews:
 Imports:
   data.table,
+  DelayedArray,
   ShortRead,
   vioplot,
   readr,

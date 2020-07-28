@@ -2,7 +2,7 @@ library(doSNOW)
 
 test <- function()
 {
-  print('MethylPipe works ok.')
+  cat('MethylPipe installation is ok.')
 }
 #
 
