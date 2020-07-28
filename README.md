@@ -8,5 +8,13 @@ To install MAPLE, type the following commands in R command prompt:
 library(devtools)
 install_github("yasin-uzun/MethylPipe.1.0")
 ```
+Once you have installed the MethylPipe package, verify that it is installed correctly as follows:
+
+```R
+library(MethylPipe)
+test()
+```
+If MethylPipe is installed without problems, you should see the following message:
+> \[1\] "MethylPipe works ok."
 
 
