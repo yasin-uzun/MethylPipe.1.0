@@ -12,7 +12,7 @@ Once you have installed the MethylPipe package, verify that it is installed corr
 
 ```R
 library(MethylPipe)
-test()
+MethylPipe::test()
 ```
 If MethylPipe is installed without any problems, you should see the following message:
 > \[1\] "MethylPipe works ok."
@@ -38,16 +38,35 @@ You also need genomic sequence and annotated genomic regions for quantification 
 To run MethylPipe, you need three configuration files to modify:
 * config.general.R : Sets the progam paths to be used by MethylPipe. You need to edit this file only once.
 * config.genome.R : Sets the genomic information and paths to be used by MethylPipe. You need to generate one for each organism. We provide the built-in configuration by hg38.
-* config.project.R : You need to configure this file for each of your project.
+* config.project.R : You need to configure this file for your project.
 
 You can download the templates for the configuration files from [here](https://chopri.box.com/s/rkqnwx4ck7larpthluyxse4hi8quypk0) and edit them for your purposes.
 
 ## Running
 
+MethylPipe is run in two steps:
+1. Read configuration files: 
+```R
+read_configs(config_dir)
+```
+`<config_dir>` should point to your configuration file directory (mentioned above). 
 
+2. Process data:
+```R
+process_sample_wrapper(raw_fastq_dir, demux_index_file, working_dir, sample_name)
+```
+`<raw_fastq_dir>` should point to the directory containing fastq files as the input. 
+`<demux_index_file>` should point to the demultiplexing index for the fastq files. 
+`<working_dir>` should point to the directory where all the outputs will be placed into. 
+`<sample_name>` (optional) is the name for the sample or project.
+
+This function reads fastq files, demultiplexes them into single cells, performs filtering, mapping (alignment), DNA methylation calling  and quantification, dimensionality reduction, clustering and differential methylation analysis for the given input. All the outputs are placed into related directories in `<working_dir>`.
 
 ## Citation
+If you use MethylPipe in your study, please cite as follows: MethylPipe: Single Cell DNA Methylation Data Processing Pipeline, GitHub, 2020. 
 
+## Contact
+For any questions or comments, please contact Yasin Uzun (uzuny at email chop edu)
 
 
 
