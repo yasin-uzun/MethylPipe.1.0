@@ -8,6 +8,7 @@ Description: Performs demultiplexing, adapter trimming, mapping, quantification,
 License: MIT License
 Encoding: UTF-8
 LazyData: true
+biocViews:
 Imports:
   data.table,
   ShortRead,

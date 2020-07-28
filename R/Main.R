@@ -5,6 +5,7 @@ test <- function()
   print('MethylPipe works ok.')
 }
 #
+
 read_configs <- function(config_dir)
 {
   print('Reading config.general.R for program paths...')
@@ -28,7 +29,7 @@ read_configs <- function(config_dir)
 #image_file = paste0(working_dir, '/Image_2020_06_11.img')
 #save.image(image_file)
 
-process_sample_wrapper <- function(working_dir, sample_name = 'Test')
+process_sample_wrapper <- function(raw_fastq_dir, demux_index_file, working_dir, sample_name = 'Test')
 {
 
   demux_fastq_dir = paste0(working_dir, '/demux_fastq/')
