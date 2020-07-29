@@ -1,12 +1,12 @@
-# MethylPipe.1.0: Single Cell DNA Methylation Data Processing Pipeline
+# SINBAD: A pipeline for processing SINgle cell Bisulfite sequencing samples and Analysis of Data
 
-MethylPipe is an R package for processing single cell DNA methylation data. It accepts fastq files as input, performs demultiplexing, adapter trimmming, mapping, quantification, dimensionality reduction and differential methylation analysis for single cell DNA methylation datasets.
+SINBAD is an R package for processing single cell DNA methylation data. It accepts fastq files as input, performs demultiplexing, adapter trimmming, mapping, quantification, dimensionality reduction and differential methylation analysis for single cell DNA methylation datasets.
 
 ## System requirements
 R 3.6.0 or later version is required for installation.  
 
 ## Installation
-To install MethylPipe, install vioplot first:
+To install SINBAD, install vioplot first:
 ```R
 install.packages("vioplot")
 ```
@@ -16,18 +16,19 @@ Then type the following commands in R command prompt:
 library(devtools)
 install_github("yasin-uzun/MethylPipe.1.0")
 ```
-Once you have installed the MethylPipe package, verify that it is installed correctly as follows:
+Once you have installed the SINBAD: A pipeline for processing SINgle cell Bisulfite sequencing samples and Analysis of Data
+ package, verify that it is installed correctly as follows:
 
 ```R
-library(MethylPipe)
-MethylPipe::test()
+library(SINBAD)
+SINBAD::test()
 ```
-If MethylPipe is installed without any problems, you should see the following message:<br /> 
-`MethylPipe installation is ok.`
+If SINBAD is installed without any problems, you should see the following message:<br /> 
+`SINBAD installation is ok.`
 
 ## Dependencies 
 
-To run MethylPipe, you need to have the underlying software:
+To run SINBAD, you need to have the underlying software:
 * Adapter Trimmer: Cutadapt or TrimGalor or Trimmomatic 
 * Aligner: Bismark (with Bowtie) or BSMAP or BS3
 * Duplicate removal: samtools or picard
@@ -43,7 +44,7 @@ You also need genomic sequence and annotated genomic regions for quantification 
 
 ## Configuration
 
-To run MethylPipe, you need three configuration files to modify:
+To run SINBAD, you need three configuration files to modify:
 * `config.general.R` : Sets the progam paths to be used by MethylPipe. You need to edit this file only once.
 * `config.genome.R` : Sets the genomic information and paths to be used by MethylPipe. You need to generate one for each organism. We provide the built-in configuration by hg38.
 * `config.project.R` : You need to configure this file for your project.
@@ -52,7 +53,7 @@ You can download the templates for the configuration files from [here](https://c
 
 ## Running
 
-MethylPipe is run in two steps:
+SINBAD is run in two steps:
 1. Read configuration files: 
 ```R
 read_configs(config_dir)
@@ -71,10 +72,11 @@ process_sample_wrapper(raw_fastq_dir, demux_index_file, working_dir, sample_name
 This function reads fastq files, demultiplexes them into single cells, performs filtering, mapping (alignment), DNA methylation calling  and quantification, dimensionality reduction, clustering and differential methylation analysis for the given input. All the outputs are placed into related directories in `working_dir`.
 
 ## Example Data
-To try MethylPipe with some example data, please contact the authors (see below). 
+To try SINBAD with some example data, please contact the authors (see below). 
 
 ## Citation
-If you use MethylPipe in your study, please cite it as follows: MethylPipe: Single Cell DNA Methylation Data Processing Pipeline, GitHub, 2020. 
+If you use SINBAD in your study, please cite it as follows: SINBAD: A pipeline for processing SINgle cell Bisulfite sequencing samples and Analysis of Data
+, GitHub, 2020. 
 
 ## Contact
 For any questions or comments, please contact Yasin Uzun (uzuny at email chop edu)
