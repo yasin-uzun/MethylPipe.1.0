@@ -64,7 +64,7 @@ read_demux_logs <- function(main_log_dir)
 }#read_demux_logs
 
 
-trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir)
+trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir, main_log_dir)
 {
 
 
@@ -76,7 +76,7 @@ trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir)
   demux_fastq_files = union(fastq_files_1, fastq_files_2)
   demux_fastq_files = demux_fastq_files[!grepl('No_matching_index', demux_fastq_files)]
 
-  trimming_log_dir = paste0(log_dir, '/trimming/')
+  trimming_log_dir = paste0(main_log_dir, '/trimming/')
   dir.create(trimming_log_dir, showWarnings = F, recursive = T)
 
   if(num_cores > 1)
@@ -94,7 +94,7 @@ trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir)
            command = paste0(cutadapt_path, '/cutadapt ',cutadapt_param_settings,
                              ' -o ', trimmed_fastq_dir, '/', fastq_file,
                              '  ',  demux_fastq_dir, '/',fastq_file ,
-                             ' >  ',  trimming_log_dir, '/',log_file
+                             ' >  ',  log_file
                              )
 
 
@@ -104,7 +104,7 @@ trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir)
         command = paste0(trim_galore_path, '/trim_galore ',trim_galore_param_settings,
                            ' -o ', trimmed_fastq_dir, '/', fastq_file,
                            '  ',  demux_fastq_dir, '/',fastq_file ,
-                           ' >  ',  trimming_log_dir, '/',log_file
+                           ' >  ',  log_file
                           )
 
       }else if(trimmer == 'Trimmomatic')
@@ -114,7 +114,7 @@ trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir)
                          ' ', Trimmomatic_param_settings,
                          ' -trimlog ', trimming_log_dir, '/',log_file,
                          ' ', demux_fastq_dir, '/',fastq_file ,
-                         ' ', trimmed_fastq_dir, '/', fastq_file
+                         ' ',  fastq_file
                          )
 
       }else
@@ -242,7 +242,7 @@ plot_preprocessing_results <- function(sample_name, demux_reports, demux_read_co
   #barplot(sort(loss_rates))
   plot(sort(loss_rates), type = 'l',
        xlab = 'Cells', ylab = '%Reads filtered out', col = 'blue',
-       main = 'Adapter trimming',
+       main = 'Adapter trimming'
        #, cex.main = 0.8
        )
 

@@ -29,38 +29,42 @@ read_configs <- function(config_dir)
 #image_file = paste0(working_dir, '/Image_2020_06_11.img')
 #save.image(image_file)
 
-process_sample_wrapper <- function(raw_fastq_dir, demux_index_file, working_dir, sample_name = 'Test')
+initialize_output_subdirectories <- function(working_dir)
 {
+  main_log_dir <<- paste0(working_dir, '/logs/')
+  demux_fastq_dir <<- paste0(working_dir, '/demux_fastq/')
+  trimmed_fastq_dir <<- paste0(working_dir, '/trimmed_fastq/')
+  alignment_dir <<- paste0(working_dir, '/alignments/')
+  methylation_calls_dir <<- paste0(working_dir, '/methylation_calls/')
+  summary_dir <<- paste0(working_dir, '/summary/')
+  plot_dir <<- paste0(working_dir, '/plots/')
 
-  demux_fastq_dir = paste0(working_dir, '/demux_fastq/')
-  trimmed_fastq_dir = paste0(working_dir, '/trimmed_fastq/')
-  alignment_dir = paste0(working_dir, '/alignments/')
-  methylation_calls_dir = paste0(working_dir, '/methylation_calls/')
-  summary_dir = paste0(working_dir, '/summary/')
-  plot_dir = paste0(working_dir, '/plots/')
-  main_log_dir = paste0(working_dir, '/logs/')
-
-  dir.create(demux_fastq_dir, showWarnings = F, recursive = T)
+  dir.create(main_log_dir, showWarnings = F, recursive = T)
   dir.create(trimmed_fastq_dir, showWarnings = F, recursive = T)
   dir.create(alignment_dir, showWarnings = F, recursive = T)
   dir.create(methylation_calls_dir, showWarnings = F, recursive = T)
   dir.create(summary_dir, showWarnings = F, recursive = T)
   dir.create(plot_dir, showWarnings = F, recursive = T)
-  dir.create(main_log_dir, showWarnings = F, recursive = T)
+  dir.create(demux_fastq_dir, showWarnings = F, recursive = T)
+}
 
 
 
+process_sample_wrapper <- function(raw_fastq_dir, demux_index_file, working_dir, sample_name = 'Test')
+{
+
+  initialize_output_subdirectories(working_dir = working_dir)
 
   par(mfrow = c(2,2))
+
   #Demultiplex fastq files
+  #TODO: Check the input fastq dir and demux file exists, give error and stop otherwise
   demux_fastq_files(raw_fastq_dir, demux_index_file, demux_index_length, demux_fastq_dir, main_log_dir)
   df_demux_reports = read_demux_logs(main_log_dir)
   head(df_demux_reports)
 
   demux_summary_file = paste0(summary_dir, '/Demux_statistics.tsv')
   write.table(df_demux_reports, file = demux_summary_file, sep = '\t', quote = F, row.names = F, col.names = T)
-
-
 
   #Count demuxd reads
   demux_read_counts =  count_fastq_reads(demux_fastq_dir)
