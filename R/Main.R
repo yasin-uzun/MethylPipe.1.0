@@ -2,7 +2,7 @@ library(doSNOW)
 
 test <- function()
 {
-  cat('MethylPipe installation is ok.')
+  cat('SINBAD installation is ok.\n')
 }
 #
 
