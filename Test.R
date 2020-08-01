@@ -15,9 +15,20 @@ working_dir = paste0(example_dir, '/working_dir/')
 library(doSNOW)
 
 
-process_sample_wrapper(raw_fastq_dir = raw_fastq_dir,
-                       demux_index_file = demux_index_file,
-                       working_dir = working_dir,
-                       sample_name = 'Test')
+sample_name <- 'Test'
+sinbad_object = construct_sinbad_object(working_dir = working_dir,
+                                        raw_fastq_dir = raw_fastq_dir,
+                                        demux_index_file = demux_index_file,
+                                        sample_name = sample_name)
+
+#process_sample_wrapper(sinbad_object)
+
+sinbad_object = wrap_demux_fastq_files(sinbad_object)
+
+sinbad_object = wrap_trim_fastq_files(sinbad_object)
+
+
+
+
 
 

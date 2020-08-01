@@ -12,3 +12,5 @@ export(plot_alignment_stats)
 export(process_bismark_split_reports)
 export(plot_split_reports)
 export(call_methylation_sites_for_sample)
+export(construct_sinbad_object)
+

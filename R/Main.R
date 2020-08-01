@@ -1,5 +1,6 @@
 library(doSNOW)
 
+
 test <- function()
 {
   cat('SINBAD installation is ok.\n')
@@ -29,8 +30,13 @@ read_configs <- function(config_dir)
 #image_file = paste0(working_dir, '/Image_2020_06_11.img')
 #save.image(image_file)
 
-initialize_output_subdirectories <- function(working_dir)
+construct_sinbad_object <- function(raw_fastq_dir ,
+                                    demux_index_file ,
+                                    working_dir ,
+                                    sample_name)
 {
+
+
   main_log_dir <<- paste0(working_dir, '/logs/')
   demux_fastq_dir <<- paste0(working_dir, '/demux_fastq/')
   trimmed_fastq_dir <<- paste0(working_dir, '/trimmed_fastq/')
@@ -46,42 +52,78 @@ initialize_output_subdirectories <- function(working_dir)
   dir.create(summary_dir, showWarnings = F, recursive = T)
   dir.create(plot_dir, showWarnings = F, recursive = T)
   dir.create(demux_fastq_dir, showWarnings = F, recursive = T)
+
+  sinbad_object = list('main_log_dir' = main_log_dir,
+                       'raw_fastq_dir' = raw_fastq_dir,
+                       'demux_index_file' = demux_index_file,
+                       'demux_fastq_dir' = demux_fastq_dir,
+                       'trimmed_fastq_dir' =  trimmed_fastq_dir,
+                       'alignment_dir' = alignment_dir,
+                       'methylation_calls_dir'  = methylation_calls_dir,
+                       'summary_dir' = summary_dir,
+                       'plot_dir' = plot_dir,
+                       'sample_name' = sample_name
+                       )
+
+  class(sinbad_object) = 'Sinbad'
+
+  return(sinbad_object)
+
+
 }
 
 
-
-process_sample_wrapper <- function(raw_fastq_dir, demux_index_file, working_dir, sample_name = 'Test')
+wrap_demux_fastq_files <- function(sinbad_object)
 {
-
-  initialize_output_subdirectories(working_dir = working_dir)
-
-  par(mfrow = c(2,2))
-
   #Demultiplex fastq files
   #TODO: Check the input fastq dir and demux file exists, give error and stop otherwise
-  demux_fastq_files(raw_fastq_dir, demux_index_file, demux_index_length, demux_fastq_dir, main_log_dir)
-  df_demux_reports = read_demux_logs(main_log_dir)
-  head(df_demux_reports)
+
+  demux_fastq_files(sinbad_object$raw_fastq_dir,
+                    sinbad_object$demux_index_file,
+                    demux_index_length,
+                    sinbad_object$demux_fastq_dir,
+                    sinbad_object$main_log_dir)
+
+  sinbad_object$df_demux_reports = read_demux_logs(main_log_dir)
 
   demux_summary_file = paste0(summary_dir, '/Demux_statistics.tsv')
-  write.table(df_demux_reports, file = demux_summary_file, sep = '\t', quote = F, row.names = F, col.names = T)
+  write.table(sinbad_object$df_demux_reports, file = demux_summary_file, sep = '\t', quote = F, row.names = F, col.names = T)
 
   #Count demuxd reads
-  demux_read_counts =  count_fastq_reads(demux_fastq_dir)
+  sinbad_object$demux_read_counts =  count_fastq_reads(demux_fastq_dir)
 
-  #Trim adapters
-  trim_fastq_files(demux_fastq_dir, trimmed_fastq_dir, main_log_dir)
-  trimmed_read_counts = count_fastq_reads(trimmed_fastq_dir)
+  return(sinbad_object)
+
+}
+
+wrap_trim_fastq_files <- function(sinbad_object)#Trim adapters
+{
+  trim_fastq_files(sinbad_object$demux_fastq_dir,
+                   sinbad_object$trimmed_fastq_dir,
+                   sinbad_object$main_log_dir)
+
+  sinbad_object$trimmed_read_counts = count_fastq_reads(trimmed_fastq_dir)
 
   plot_file = paste0(plot_dir, '/Preprocessing_statistics.eps')
   postscript(plot_file, paper = 'a4', horizontal = T, title = sample_name)
-  plot_preprocessing_results(sample_name, demux_reports, demux_read_counts, trimmed_read_counts)
+  plot_preprocessing_results(sample_name = sinbad_object$sample_name,
+                             demux_reports = sinbad_object$demux_reports,
+                             demux_read_counts = sinbad_object$demux_read_counts,
+                             trimmed_read_counts = sinbad_object$trimmed_read_counts)
   dev.off()
 
-  #Run aligner
-  align_sample(read_dir = trimmed_fastq_dir, genomic_sequence_path, alignment_dir, num_cores, mapq_threshold, main_log_dir)
+  return(sinbad_object)
+}
 
-  df_alignment_reports = process_bismark_alignment_reports(alignment_dir)
+wrap_align_sample <- function(sinbad_object)
+{
+
+  #Run aligner
+  align_sample(read_dir = sinbad_object$trimmed_fastq_dir,
+               genomic_sequence_path,
+               sinbad_object$alignment_dir, num_cores, mapq_threshold, main_log_dir)
+
+  df_alignment_reports = process_bismark_alignment_reports(sinbad_object$alignment_dir)
   df_bam_read_counts = count_bam_files(alignment_dir)
   dim(df_alignment_reports)
   dim(df_bam_read_counts)
@@ -117,6 +159,21 @@ process_sample_wrapper <- function(raw_fastq_dir, demux_index_file, working_dir,
   dev.off()
 
   head(df_org_split_reports)
+
+}
+
+process_sample_wrapper <- function(sinbad_object)
+{
+
+
+  par(mfrow = c(2,2))
+
+  sinbad_object = wrap_demux_fastq_files(sinbad_object)
+
+  sinbad_object = wrap_trim_fastq_files(sinbad_object)
+
+
+
 
   #Call Methylation Sites
   call_methylation_sites_for_sample(alignment_dir, methylation_calls_dir, main_log_dir)
