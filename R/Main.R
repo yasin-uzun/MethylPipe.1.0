@@ -102,12 +102,12 @@ wrap_trim_fastq_files <- function(sinbad_object)#Trim adapters
                    sinbad_object$trimmed_fastq_dir,
                    sinbad_object$main_log_dir)
 
-  sinbad_object$trimmed_read_counts = count_fastq_reads(trimmed_fastq_dir)
+  sinbad_object$trimmed_read_counts = count_fastq_reads(sinbad_object$trimmed_fastq_dir)
 
   plot_file = paste0(plot_dir, '/Preprocessing_statistics.eps')
   postscript(plot_file, paper = 'a4', horizontal = T, title = sample_name)
   plot_preprocessing_results(sample_name = sinbad_object$sample_name,
-                             demux_reports = sinbad_object$demux_reports,
+                             demux_reports = sinbad_object$df_demux_reports,
                              demux_read_counts = sinbad_object$demux_read_counts,
                              trimmed_read_counts = sinbad_object$trimmed_read_counts)
   dev.off()
