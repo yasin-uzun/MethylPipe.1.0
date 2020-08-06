@@ -13,9 +13,11 @@ demux_fastq_files <- function(raw_fastq_dir, demux_index_file, demux_index_lengt
 
   if(num_cores > 1)
   {
-    cl <- makeCluster(num_cores, outfile="", type = 'SOCK')
+    raw_fastq_file_count = length(raw_fastq_files)
+    thread_count = min(raw_fastq_file_count, num_cores)
+    cl <- makeCluster(thread_count, outfile="", type = 'SOCK')
     registerDoSNOW(cl)
-    foreach(i=1:length(raw_fastq_files), .export = ls(globalenv()) ) %dopar%
+    foreach(i=1:raw_fastq_file_count, .export = ls(globalenv()) ) %dopar%
     {
       raw_fastq_file = raw_fastq_files[i]
       print(raw_fastq_file)
@@ -30,10 +32,12 @@ demux_fastq_files <- function(raw_fastq_dir, demux_index_file, demux_index_lengt
                              ' --output_prefix ', output_prefix,
                              ' --log_dir ', demux_log_dir)
 
-
+      print(demux_command)
       system(demux_command)
 
     }#foreach(i=1:length(raw_fastq_files))
+
+    stopCluster(cl)
 
   }#if(num_cores > 1)
 
@@ -63,11 +67,12 @@ read_demux_logs <- function(main_log_dir)
   return(df_demux_combined)
 }#read_demux_logs
 
+#source("/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/p99/MethylProc/R/preprocessing.R")
 
 trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir, main_log_dir)
 {
 
-
+  print('Trimming fastq files')
   setwd(demux_fastq_dir)
 
   fastq_files_1 = list.files(demux_fastq_dir, pattern = "*.fastq.gz")
@@ -75,7 +80,8 @@ trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir, main_log_dir)
 
   demux_fastq_files = union(fastq_files_1, fastq_files_2)
   demux_fastq_files = demux_fastq_files[!grepl('No_matching_index', demux_fastq_files)]
-
+  print('demux_fastq_files :')
+  print( demux_fastq_files)
   trimming_log_dir = paste0(main_log_dir, '/trimming/')
   dir.create(trimming_log_dir, showWarnings = F, recursive = T)
 
@@ -86,7 +92,7 @@ trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir, main_log_dir)
     foreach(i=1:length(demux_fastq_files), .export = ls(globalenv())) %dopar%
     {
       fastq_file = demux_fastq_files[i]
-      print(fastq_file)
+      print(paste('Input fastq: ', fastq_file) )
       log_file = paste0(trimming_log_dir, fastq_file, '.log')
 
       if(trimmer == 'cutadapt')
@@ -96,7 +102,7 @@ trim_fastq_files <- function(demux_fastq_dir, trimmed_fastq_dir, main_log_dir)
                              '  ',  demux_fastq_dir, '/',fastq_file ,
                              ' >  ',  log_file
                              )
-
+          print(command)
 
       }else if(trimmer == 'trim_galore')
       {
