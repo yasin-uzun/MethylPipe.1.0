@@ -1,5 +1,5 @@
-#library(devtools)
-#install_github("yasin-uzun/SINBAD.1.0")
+library(devtools)
+install_github("yasin-uzun/SINBAD.1.0")
 
 library(SINBAD)
 SINBAD::test()
@@ -43,7 +43,7 @@ print(sinbad_object)
 #Align
 sinbad_object = wrap_align_sample(sinbad_object)
 
-sinbad_object_file = paste0(working_dir, '/sinbad_object.02.rds')
+sinbad_object_file = paste0(working_dir, '/sinbad_object.03.rds')
 saveRDS(sinbad_object,   file = sinbad_object_file)
 sinbad_object = readRDS(sinbad_object_file)
 print(sinbad_object)
