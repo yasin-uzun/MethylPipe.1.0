@@ -19,58 +19,8 @@ dir.create(working_dir, recursive = T)
 
 library(doSNOW)
 
-
-wrap_align_sample <- function(sinbad_object)
-{
-
-  #Run aligner
-  align_sample(read_dir = sinbad_object$trimmed_fastq_dir,
-               genomic_sequence_path = genomic_sequence_path,
-               alignment_dir = sinbad_object$alignment_dir,
-               aligner = aligner,
-               num_cores= num_cores,
-               mapq_threshold =mapq_threshold,
-               main_log_dir = sinbad_object$main_log_dir)
-
-
-  df_alignment_reports = process_bismark_alignment_reports(sinbad_object$alignment_dir)
-  df_bam_read_counts = count_bam_files(alignment_dir)
-  dim(df_alignment_reports)
-  dim(df_bam_read_counts)
-
-
-  df_alignment_stats = base::merge(df_alignment_reports, df_bam_read_counts, by = 0)
-  dim(df_alignment_stats)
-  head(df_alignment_stats)
-
-  coverage_rates = compute_coverage_rates(alignment_dir)
-  df_alignment_stats$coverage_rate = coverage_rates[as.character(df_alignment_stats$Cell_ID)]
-
-  df_alignment_stats$Row.names = NULL
-  rownames(df_alignment_stats) = df_alignment_stats$Cell_ID
-  alignment_summary_file = paste0(summary_dir, '/Alignment_statistics.tsv')
-  write.table(df_alignment_stats, file = alignment_summary_file, sep = '\t', quote = F, row.names = F, col.names = T)
-
-
-  plot_file = paste0(plot_dir, '/Alignment_statistics.eps')
-  postscript(plot_file, paper = 'a4', horizontal = F, title = sample_name)
-  plot_alignment_stats(sample_name, df_alignment_stats, coverage_rates)
-  dev.off()
-
-  df_org_split_reports = process_bismark_split_reports(methylation_calls_dir, genome_type = 'organism')
-  df_lambda_split_reports = process_bismark_split_reports(methylation_calls_dir, genome_type = 'lambda')
-
-  list_org_bias_reports = process_bismark_bias_reports(methylation_calls_dir, genome_type = 'organism')
-  list_lambda_bias_reports = process_bismark_bias_reports(methylation_calls_dir, genome_type = 'lambda')
-
-  plot_file = paste0(plot_dir, '/Met_call_statistics.eps')
-  postscript(plot_file, paper = 'a4', horizontal = F, title = sample_name)
-  plot_split_reports(df_org_split_reports, df_lambda_split_reports, list_org_bias_reports)
-  dev.off()
-
-  head(df_org_split_reports)
-
-}
+source('/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/p99/MethylProc/R/Main.R')
+source('/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/p99/MethylProc/R/alignment.R')
 
 
 sample_name <- 'Test'
@@ -98,6 +48,19 @@ saveRDS(sinbad_object,   file = sinbad_object_file)
 sinbad_object = readRDS(sinbad_object_file)
 print('Step 2')
 print(sinbad_object)
+
+
+#Align
+sinbad_object = readRDS("/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//sinbad_object.02.rds")
+sinbad_object = wrap_align_sample(sinbad_object)
+
+
+sinbad_object_file = paste0(working_dir, '/sinbad_object.03.rds')
+saveRDS(sinbad_object,   file = sinbad_object_file)
+sinbad_object = readRDS(sinbad_object_file)
+print(sinbad_object)
+
+
 
 
 

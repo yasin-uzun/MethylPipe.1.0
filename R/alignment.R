@@ -30,6 +30,7 @@ align_sample <- function(read_dir,
     foreach(i=1:length(fastq_files)) %dopar%
     {
       fastq_file = fastq_files[i]
+      cat('** fastq_file: ', fastq_file, '\n')
       align_cell(read_dir = read_dir,
                  fastq_file = fastq_file,
                  aligner = aligner,
@@ -63,6 +64,10 @@ align_sample <- function(read_dir,
 
 align_cell <- function(read_dir, fastq_file, aligner, genomic_sequence_path,
                        alignment_dir, methylation_calls_dir, log_dir){
+
+  print('align_cell')
+  cat(' -- fastq_file: ', fastq_file, '\n')
+
   cell_id = gsub('.fastq.gz', '', fastq_file)
 
   #Align
@@ -138,17 +143,17 @@ run_bismark_aligner <- function(read_dir, fastq_file_left, fastq_file_right = NU
   log_sub_dir = paste0(log_dir, '/bismark_aligner/')
   dir.create(log_sub_dir, recursive = T, showWarnings = F)
 
-  log_file = paste0(log_sub_dir, fastq_file, '.log')
+  log_file = paste0(log_sub_dir, fastq_file_left, '.log')
 
   sys_command = paste0('bismark --bowtie2 ', bismark_aligner_param_settings
                              ,' --fastq  '
                              ,' --basename ', cell_id
                              ,' --bam ', genomic_sequence_path
-                             ,'  ', read_dir, fastq_file
+                             ,'  ', read_dir, fastq_file_left
                              ,' > ', log_file
                        )
 
-  cat('Aligning ', fastq_file, '\n')
+  cat('Aligning ', fastq_file_left, '\n')
   print(sys_command)
   command_result = system(sys_command)
 

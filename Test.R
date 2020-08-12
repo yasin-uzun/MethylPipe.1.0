@@ -15,6 +15,9 @@ working_dir = paste0(example_dir, '/working_dir/')
 library(doSNOW)
 
 
+source('/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/p99/MethylProc/R/Main.R')
+source('/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/p99/MethylProc/R/alignment.R')
+
 sample_name <- 'Test'
 sinbad_object = construct_sinbad_object(working_dir = working_dir,
                                         raw_fastq_dir = raw_fastq_dir,
@@ -41,6 +44,7 @@ print(sinbad_object)
 
 
 #Align
+sinbad_object = readRDS("/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//sinbad_object.02.rds")
 sinbad_object = wrap_align_sample(sinbad_object)
 
 sinbad_object_file = paste0(working_dir, '/sinbad_object.03.rds')

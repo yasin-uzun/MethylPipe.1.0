@@ -84,7 +84,7 @@ wrap_demux_fastq_files <- function(sinbad_object)
                     sinbad_object$demux_fastq_dir,
                     sinbad_object$main_log_dir)
 
-  sinbad_object$df_demux_reports = read_demux_logs(main_log_dir)
+  sinbad_object$df_demux_reports = read_demux_logs(sinbad_object$main_log_dir)
 
   demux_summary_file = paste0(summary_dir, '/Demux_statistics.tsv')
   write.table(sinbad_object$df_demux_reports, file = demux_summary_file, sep = '\t', quote = F, row.names = F, col.names = T)
@@ -125,7 +125,7 @@ wrap_align_sample <- function(sinbad_object)
                aligner = aligner,
                num_cores= num_cores,
                mapq_threshold =mapq_threshold,
-               main_log_dir = main_log_dir)
+               main_log_dir = sinbad_object$main_log_dir)
 
 
   df_alignment_reports = process_bismark_alignment_reports(sinbad_object$alignment_dir)
