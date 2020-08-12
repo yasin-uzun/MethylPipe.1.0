@@ -6,13 +6,13 @@ library(Rsamtools)
 
 align_sample <- function(read_dir,
                          genomic_sequence_path,
-                         working_dir,
+                         alignment_dir,
                          aligner,
                          num_cores,
-                         mapq_threshold)
+                         mapq_threshold, main_log_dir)
 {
-  alignment_dir = paste0(working_dir, '/alignments/', aligner, '/')
-  dir.create(alignment_dir, showWarnings = F, recursive = T)
+  log_dir= paste0(main_log_dir, '/alignment/')
+  dir.create(log_dir, recursive = T)
   setwd(alignment_dir)
 
   fastq_files_1 = list.files(read_dir, pattern = "*.fastq.gz")
@@ -23,15 +23,20 @@ align_sample <- function(read_dir,
   if(num_cores > 1)
   {
     cl <- makeCluster(num_cores, outfile="", type = 'SOCK')
+    clusterExport(cl, ls(.GlobalEnv))
     registerDoSNOW(cl)
+    clusterExport(cl, ls(.GlobalEnv))
+
     foreach(i=1:length(fastq_files)) %dopar%
     {
       fastq_file = fastq_files[i]
       align_cell(read_dir = read_dir,
                  fastq_file = fastq_file,
+                 aligner = aligner,
                  genomic_sequence_path = genomic_sequence_path,
                  alignment_dir = alignment_dir,
-                 methylation_calls_dir = methylation_calls_dir)
+                 methylation_calls_dir = methylation_calls_dir,
+                 log_dir = log_dir)
 
     }#foreach
   }else#if(num_cores > 1)
@@ -41,9 +46,10 @@ align_sample <- function(read_dir,
       fastq_file = fastq_files[i]
       align_cell(read_dir = read_dir,
                  fastq_file = fastq_file,
+                 aligner = aligner,
                  genomic_sequence_path = genomic_sequence_path,
                  alignment_dir = alignment_dir,
-                 methylation_calls_dir = methylation_calls_dir)
+                 methylation_calls_dir = methylation_calls_dir, log_dir)
 
     }#foreach
 
@@ -55,8 +61,8 @@ align_sample <- function(read_dir,
 
 
 
-align_cell <- function(read_dir, fastq_file, genomic_sequence_path,
-                       alignment_dir, methylation_calls_dir){
+align_cell <- function(read_dir, fastq_file, aligner, genomic_sequence_path,
+                       alignment_dir, methylation_calls_dir, log_dir){
   cell_id = gsub('.fastq.gz', '', fastq_file)
 
   #Align
@@ -64,7 +70,7 @@ align_cell <- function(read_dir, fastq_file, genomic_sequence_path,
   {
 
     run_bismark_aligner(read_dir = read_dir,
-                        fastq_file = fastq_file,
+                        fastq_file_left = fastq_file,
                         genomic_sequence_path = genomic_sequence_path,
                         alignment_dir = alignment_dir,
                         cell_id = cell_id, log_dir = log_dir)

@@ -120,8 +120,13 @@ wrap_align_sample <- function(sinbad_object)
 
   #Run aligner
   align_sample(read_dir = sinbad_object$trimmed_fastq_dir,
-               genomic_sequence_path,
-               sinbad_object$alignment_dir, num_cores, mapq_threshold, main_log_dir)
+               genomic_sequence_path = genomic_sequence_path,
+               alignment_dir = sinbad_object$alignment_dir,
+               aligner = aligner,
+               num_cores= num_cores,
+               mapq_threshold =mapq_threshold,
+               main_log_dir = main_log_dir)
+
 
   df_alignment_reports = process_bismark_alignment_reports(sinbad_object$alignment_dir)
   df_bam_read_counts = count_bam_files(alignment_dir)
@@ -172,7 +177,7 @@ process_sample_wrapper <- function(sinbad_object)
 
   sinbad_object = wrap_trim_fastq_files(sinbad_object)
 
-
+  sinbad_object = wrap_align_sample(sinbad_object)
 
 
   #Call Methylation Sites
@@ -189,8 +194,8 @@ process_sample_wrapper <- function(sinbad_object)
 
 
   #Quantify methylation in regions
-  df_for_dim_red = df_10k_bins
-  name_for_dim_red = '10k_bins'
+  df_for_dim_red = df_100k_bins
+  name_for_dim_red = '100k_bins'
   df_for_features = df_promoters
   name_for_features = 'Promoters'
 

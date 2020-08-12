@@ -28,11 +28,23 @@ sinbad_object = construct_sinbad_object(working_dir = working_dir,
 
 #process_sample_wrapper(sinbad_object)
 
+#Demux
 sinbad_object = wrap_demux_fastq_files(sinbad_object)
 
+sinbad_object_file = paste0(working_dir, '/sinbad_object.01.rds')
+saveRDS(sinbad_object,   file = sinbad_object_file)
+sinbad_object = readRDS(sinbad_object_file)
+print('Step 1')
+print(sinbad_object)
+
+#Trim
 sinbad_object = wrap_trim_fastq_files(sinbad_object)
 
-
+sinbad_object_file = paste0(working_dir, '/sinbad_object.02.rds')
+saveRDS(sinbad_object,   file = sinbad_object_file)
+sinbad_object = readRDS(sinbad_object_file)
+print('Step 2')
+print(sinbad_object)
 
 
 
