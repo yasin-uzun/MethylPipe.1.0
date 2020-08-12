@@ -1,0 +1,3674 @@
+Loading R/3.6.2
+  Loading requirement: java/current hdf5/1.10.4 gdal/2.4 gsl/2.5 jags/current
+SINBAD installation is ok.
+[1] "Reading config.general.R for program paths..."
+[1] "Reading config.genome.R for genome paths..."
+[1] "Reading config.project.R for prroject settings..."
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: snow
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+Type: EXEC 
+Type: EXEC 
+Loading required package: SINBAD
+Loading required package: SINBAD
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+Type: EXEC 
+Type: EXEC 
+[1][1] "Batch1___Lane01.fastq.gz"
+ "Batch2___Lane10.fastq.gz"
+[1][1] "perl /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//perl/demultiplex_fastq.pl  --demux_index_file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//demux_index.txt --raw_fastq_file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads//Batch2___Lane10.fastq.gz --demux_index_length 6 --output_dir /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq/ --output_prefix Batch2___Lane10 --log_dir /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//demux/"
+ "perl /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//perl/demultiplex_fastq.pl  --demux_index_file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//demux_index.txt --raw_fastq_file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads//Batch1___Lane01.fastq.gz --demux_index_length 6 --output_dir /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq/ --output_prefix Batch1___Lane01 --log_dir /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//demux/"
+...
+Hello! My name is Demuxer.
+I will split your input read file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads//Batch2___Lane10.fastq.gz based on index at /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//demux_index.txt 
+Index length is specified as 6 
+Output prefix: Batch2___Lane10 
+Output dir: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq/ 
+log_dir dir: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//demux/ 
+...
+CGATGT:CGATGT
+***CGATGT:CGATGT
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_CGATGT.fastq.gz
+GCCAAT:GCCAAT
+***GCCAAT:GCCAAT
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_GCCAAT.fastq.gz
+ACTTGA:ACTTGA
+***ACTTGA:ACTTGA
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_ACTTGA.fastq.gz
+TAGCTT:TAGCTT
+***TAGCTT:TAGCTT
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_TAGCTT.fastq.gz
+ATCACG:ATCACG
+***ATCACG:ATCACG
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_ATCACG.fastq.gz
+TGACCA:TGACCA
+***TGACCA:TGACCA
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_TGACCA.fastq.gz
+...
+Hello! My name is Demuxer.
+I will split your input read file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads//Batch1___Lane01.fastq.gz based on index at /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//demux_index.txt 
+Index length is specified as 6 
+Output prefix: Batch1___Lane01 
+Output dir: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq/ 
+log_dir dir: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//demux/ 
+...
+CGATGT:CGATGT
+***CGATGT:CGATGT
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_CGATGT.fastq.gz
+CAGATC:CAGATC
+***CAGATC:CAGATC
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_CAGATC.fastq.gz
+GCCAAT:GCCAAT
+***GCCAAT:GCCAAT
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_GCCAAT.fastq.gz
+CTTGTA:CTTGTA
+***CTTGTA:CTTGTA
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_CTTGTA.fastq.gz
+ACTTGA:ACTTGA
+***ACTTGA:ACTTGA
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_ACTTGA.fastq.gz
+8 indeces found.
+Processing /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads//Batch2___Lane10.fastq.gz 
+TAGCTT:TAGCTT
+***TAGCTT:TAGCTT
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_TAGCTT.fastq.gz
+ATCACG:ATCACG
+***ATCACG:ATCACG
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_ATCACG.fastq.gz
+TGACCA:TGACCA
+***TGACCA:TGACCA
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_TGACCA.fastq.gz
+CAGATC:CAGATC
+***CAGATC:CAGATC
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_CAGATC.fastq.gz
+CTTGTA:CTTGTA
+***CTTGTA:CTTGTA
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_CTTGTA.fastq.gz
+8 indeces found.
+Processing /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads//Batch1___Lane01.fastq.gz 
+**********/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//No_matching_index.Batch2___Lane10.fastq.gz***********
+Finished processing /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads//Batch2___Lane10.fastq.gz 
+**********/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//No_matching_index.Batch1___Lane01.fastq.gz***********
+Finished processing /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads//Batch1___Lane01.fastq.gz 
+Type: DONE 
+Type: DONE 
+[1] "Batch1___Lane01.log"
+[1] "Batch2___Lane10.log"
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Loading required package: SINBAD
+Type: EXEC 
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+
+Attaching package: ‘parallel’
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+
+Attaching package: ‘parallel’
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+
+Attaching package: ‘parallel’
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+
+Attaching package: ‘parallel’
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+
+Attaching package: ‘BiocGenerics’
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+Loading required package: BiocParallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+
+Attaching package: ‘BiocGenerics’
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+Loading required package: BiocParallel
+Loading required package: BiocParallel
+Loading required package: BiocParallel
+Loading required package: BiocParallel
+Loading required package: BiocParallel
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+Loading required package: BiocParallel
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+Loading required package: BiocParallel
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: IRanges
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+
+Attaching package: ‘S4Vectors’
+
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: IRanges
+Loading required package: IRanges
+Loading required package: IRanges
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: Rsamtools
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+Loading required package: GenomeInfoDb
+Loading required package: GenomeInfoDb
+Loading required package: GenomeInfoDb
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicAlignments
+Loading required package: SummarizedExperiment
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: Biobase
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: GenomicAlignments
+Loading required package: matrixStats
+Loading required package: GenomicAlignments
+Loading required package: SummarizedExperiment
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Loading required package: Biobase
+Loading required package: SummarizedExperiment
+Loading required package: GenomicAlignments
+Loading required package: Biobase
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Loading required package: GenomicAlignments
+Loading required package: GenomicAlignments
+Loading required package: SummarizedExperiment
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: GenomicAlignments
+Loading required package: DelayedArray
+Loading required package: GenomicAlignments
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: matrixStats
+Loading required package: DelayedArray
+Loading required package: matrixStats
+Loading required package: matrixStats
+Loading required package: SummarizedExperiment
+Loading required package: SummarizedExperiment
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Loading required package: Biobase
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Loading required package: Biobase
+Loading required package: DelayedArray
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: matrixStats
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: matrixStats
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+[1] "Batch1___Lane01_ATCACG.fastq.gz"
+[1] "Batch1___Lane01_CGATGT.fastq.gz"
+[1] "Batch1___Lane01_TAGCTT.fastq.gz"
+[1] "Batch1___Lane01_ACTTGA.fastq.gz"
+[1] "Batch1___Lane01_GCCAAT.fastq.gz"
+[1] "Batch1___Lane01_CTTGTA.fastq.gz"
+[1] "Batch1___Lane01_TGACCA.fastq.gz"
+[1] "Batch1___Lane01_CAGATC.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_ACTTGA.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_ATCACG.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_CAGATC.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_CGATGT.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_CTTGTA.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_GCCAAT.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_TAGCTT.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_TGACCA.fastq.gz"
+Warning message:
+In e$fun(obj, substitute(ex), parent.frame(), e$data) :
+  already exporting variable(s): demux_fastq_dir, demux_index_file, demux_index_length, raw_fastq_dir
+$main_log_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs/"
+
+$raw_fastq_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads/"
+
+$demux_index_file
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//demux_index.txt"
+
+$demux_fastq_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq/"
+
+$trimmed_fastq_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/"
+
+$alignment_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//alignments/"
+
+$methylation_calls_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//methylation_calls/"
+
+$summary_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//summary/"
+
+$plot_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//plots/"
+
+$sample_name
+[1] "Test"
+
+$df_demux_reports
+                          Group Total_reads Reads_with_matching_index
+Batch1___Lane01 Batch1___Lane01    23189895                  22322810
+Batch2___Lane10 Batch2___Lane10    11493001                  11199406
+                Reads_without_matching_index  CGATGT  TAGCTT  TGACCA  GCCAAT
+Batch1___Lane01                       867085 2697288 3044397 3047886 2396650
+Batch2___Lane10                       293595 1072248 1617483 1010357 1565710
+                 CAGATC  ACTTGA  CTTGTA  ATCACG
+Batch1___Lane01 2979879 2566893 2422075 3167742
+Batch2___Lane10 1622009 1420252 1596971 1294376
+
+$demux_read_counts
+Batch1___Lane01_ACTTGA Batch1___Lane01_ATCACG Batch1___Lane01_CAGATC 
+               2566893                3167742                2979879 
+Batch1___Lane01_CGATGT Batch1___Lane01_CTTGTA Batch1___Lane01_GCCAAT 
+               2697288                2422075                2396650 
+Batch1___Lane01_TAGCTT Batch1___Lane01_TGACCA Batch2___Lane10_ACTTGA 
+               3044397                3047886                1420252 
+Batch2___Lane10_ATCACG Batch2___Lane10_CAGATC Batch2___Lane10_CGATGT 
+               1294376                1622009                1072248 
+Batch2___Lane10_CTTGTA Batch2___Lane10_GCCAAT Batch2___Lane10_TAGCTT 
+               1596971                1565710                1617483 
+Batch2___Lane10_TGACCA 
+               1010357 
+
+attr(,"class")
+[1] "Sinbad"
+[1] "Trimming fastq files"
+[1] "demux_fastq_files :"
+ [1] "Batch1___Lane01_ACTTGA.fastq.gz" "Batch1___Lane01_ATCACG.fastq.gz"
+ [3] "Batch1___Lane01_CAGATC.fastq.gz" "Batch1___Lane01_CGATGT.fastq.gz"
+ [5] "Batch1___Lane01_CTTGTA.fastq.gz" "Batch1___Lane01_GCCAAT.fastq.gz"
+ [7] "Batch1___Lane01_TAGCTT.fastq.gz" "Batch1___Lane01_TGACCA.fastq.gz"
+ [9] "Batch2___Lane10_ACTTGA.fastq.gz" "Batch2___Lane10_ATCACG.fastq.gz"
+[11] "Batch2___Lane10_CAGATC.fastq.gz" "Batch2___Lane10_CGATGT.fastq.gz"
+[13] "Batch2___Lane10_CTTGTA.fastq.gz" "Batch2___Lane10_GCCAAT.fastq.gz"
+[15] "Batch2___Lane10_TAGCTT.fastq.gz" "Batch2___Lane10_TGACCA.fastq.gz"
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Loading required package: SINBAD
+Type: EXEC 
+Type: EXEC 
+Loading required package: SINBAD
+Type: EXEC 
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Type: EXEC 
+Type: EXEC 
+Loading required package: SINBAD
+Loading required package: SINBAD
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+[1][1][1] "Input fastq:  Batch1___Lane01_ATCACG.fastq.gz"
+[1] "Input fastq:  Batch1___Lane01_CTTGTA.fastq.gz"[1]
+ "Input fastq:  Batch1___Lane01_CGATGT.fastq.gz"
+ "Input fastq:  Batch1___Lane01_ACTTGA.fastq.gz"
+[1] "Input fastq:  Batch1___Lane01_CAGATC.fastq.gz"
+ "Input fastq:  Batch1___Lane01_GCCAAT.fastq.gz"
+[1][1][1][1][1] "Input fastq:  Batch1___Lane01_TAGCTT.fastq.gz"
+[1][1][1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch1___Lane01_ATCACG.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_ATCACG.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch1___Lane01_ATCACG.fastq.gz.log"
+ "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch1___Lane01_CTTGTA.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_CTTGTA.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch1___Lane01_CTTGTA.fastq.gz.log"
+ "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch1___Lane01_CGATGT.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_CGATGT.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch1___Lane01_CGATGT.fastq.gz.log"
+ "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch1___Lane01_ACTTGA.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_ACTTGA.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch1___Lane01_ACTTGA.fastq.gz.log" "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch1___Lane01_CAGATC.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_CAGATC.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch1___Lane01_CAGATC.fastq.gz.log"
+
+ "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch1___Lane01_GCCAAT.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_GCCAAT.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch1___Lane01_GCCAAT.fastq.gz.log"
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch1___Lane01_TAGCTT.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_TAGCTT.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch1___Lane01_TAGCTT.fastq.gz.log"
+ "Input fastq:  Batch1___Lane01_TGACCA.fastq.gz"
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch1___Lane01_TGACCA.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch1___Lane01_TGACCA.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch1___Lane01_TGACCA.fastq.gz.log"
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+Type: EXEC 
+[1] "Input fastq:  Batch2___Lane10_ACTTGA.fastq.gz"
+Type: EXEC 
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch2___Lane10_ACTTGA.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_ACTTGA.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch2___Lane10_ACTTGA.fastq.gz.log"
+[1]Type: EXEC 
+Type: EXEC 
+ "Input fastq:  Batch2___Lane10_ATCACG.fastq.gz"
+Type: EXEC 
+[1][1]Type: EXEC 
+ "Input fastq:  Batch2___Lane10_CAGATC.fastq.gz"
+ "Input fastq:  Batch2___Lane10_CGATGT.fastq.gz"
+[1][1][1]Type: EXEC 
+ "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch2___Lane10_ATCACG.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_ATCACG.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch2___Lane10_ATCACG.fastq.gz.log"
+[1] "Input fastq:  Batch2___Lane10_CTTGTA.fastq.gz"
+ "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch2___Lane10_CAGATC.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_CAGATC.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch2___Lane10_CAGATC.fastq.gz.log"
+ "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch2___Lane10_CGATGT.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_CGATGT.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch2___Lane10_CGATGT.fastq.gz.log"
+[1] "Input fastq:  Batch2___Lane10_GCCAAT.fastq.gz"
+[1][1][1] "Input fastq:  Batch2___Lane10_TAGCTT.fastq.gz"
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch2___Lane10_CTTGTA.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_CTTGTA.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch2___Lane10_CTTGTA.fastq.gz.log"
+ "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch2___Lane10_GCCAAT.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_GCCAAT.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch2___Lane10_GCCAAT.fastq.gz.log"
+ "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch2___Lane10_TAGCTT.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_TAGCTT.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch2___Lane10_TAGCTT.fastq.gz.log"
+Type: EXEC 
+[1] "Input fastq:  Batch2___Lane10_TGACCA.fastq.gz"
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt  -f fastq -q 20 -u 10 -m 30 -a AGATCGGAAGAGCACACGTCTGAAC  -o /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq//Batch2___Lane10_TGACCA.fastq.gz  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq//Batch2___Lane10_TGACCA.fastq.gz >  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//trimming/Batch2___Lane10_TGACCA.fastq.gz.log"
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+sh: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//programs//cutadapt: /opt/anaconda3/bin/python3: bad interpreter: No such file or directory
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: BiocGenerics
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+Loading required package: parallel
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+
+Attaching package: ‘parallel’
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, clusterSplit, makeCluster, parApply,
+    parCapply, parLapply, parRapply, parSapply, splitIndices,
+    stopCluster
+
+
+Attaching package: ‘BiocGenerics’
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+
+Attaching package: ‘BiocGenerics’
+
+
+Attaching package: ‘BiocGenerics’
+
+Loading required package: BiocParallel
+Loading required package: BiocParallel
+Loading required package: BiocParallel
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+Loading required package: BiocParallel
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+Loading required package: BiocParallel
+Loading required package: BiocParallel
+Loading required package: BiocParallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parLapplyLB, parRapply, parSapply, parSapplyLB
+
+The following objects are masked from ‘package:snow’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+    clusterExport, clusterMap, parApply, parCapply, parLapply,
+    parRapply, parSapply
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+    dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+    grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+    order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+    rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+    union, unique, unsplit, which, which.max, which.min
+
+Loading required package: BiocParallel
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: Biostrings
+Loading required package: S4Vectors
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: Biostrings
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: stats4
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: S4Vectors
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: stats4
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: IRanges
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+
+Attaching package: ‘S4Vectors’
+
+The following object is masked from ‘package:base’:
+
+    expand.grid
+
+Loading required package: IRanges
+Loading required package: IRanges
+Loading required package: IRanges
+Loading required package: IRanges
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+Loading required package: XVector
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: Rsamtools
+Loading required package: Rsamtools
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: GenomeInfoDb
+Loading required package: Rsamtools
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+Loading required package: GenomeInfoDb
+Loading required package: GenomeInfoDb
+Loading required package: GenomeInfoDb
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Loading required package: Rsamtools
+Loading required package: GenomeInfoDb
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicRanges
+Loading required package: GenomicAlignments
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Loading required package: GenomicAlignments
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Loading required package: GenomicAlignments
+Loading required package: GenomicAlignments
+Loading required package: GenomicAlignments
+Loading required package: GenomicAlignments
+Loading required package: GenomicAlignments
+Loading required package: GenomicAlignments
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: SummarizedExperiment
+Loading required package: matrixStats
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: SummarizedExperiment
+Loading required package: DelayedArray
+Loading required package: SummarizedExperiment
+Loading required package: SummarizedExperiment
+Loading required package: SummarizedExperiment
+Loading required package: Biobase
+Loading required package: SummarizedExperiment
+Loading required package: matrixStats
+Loading required package: Biobase
+Loading required package: Biobase
+Loading required package: Biobase
+Loading required package: Biobase
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Loading required package: Biobase
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+Loading required package: matrixStats
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: DelayedArray
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+Loading required package: DelayedArray
+Loading required package: DelayedArray
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: matrixStats
+Loading required package: DelayedArray
+Loading required package: DelayedArray
+Loading required package: matrixStats
+Loading required package: matrixStats
+Loading required package: matrixStats
+Loading required package: matrixStats
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘matrixStats’
+
+The following objects are masked from ‘package:Biobase’:
+
+    anyMissing, rowMedians
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+
+Attaching package: ‘DelayedArray’
+
+The following objects are masked from ‘package:matrixStats’:
+
+    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges
+
+The following object is masked from ‘package:Biostrings’:
+
+    type
+
+The following objects are masked from ‘package:base’:
+
+    aperm, apply, rowsum
+
+[1] "Batch1___Lane01_GCCAAT.fastq.gz"
+[1] "Batch1___Lane01_CAGATC.fastq.gz"
+[1] "Batch1___Lane01_ACTTGA.fastq.gz"
+[1] "Batch1___Lane01_CTTGTA.fastq.gz"
+[1] "Batch1___Lane01_ATCACG.fastq.gz"
+[1] "Batch1___Lane01_CGATGT.fastq.gz"
+[1] "Batch1___Lane01_TGACCA.fastq.gz"
+[1] "Batch1___Lane01_TAGCTT.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_ACTTGA.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_ATCACG.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_CAGATC.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_CGATGT.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_CTTGTA.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_GCCAAT.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_TAGCTT.fastq.gz"
+Type: EXEC 
+[1] "Batch2___Lane10_TGACCA.fastq.gz"
+Warning messages:
+1: In e$fun(obj, substitute(ex), parent.frame(), e$data) :
+  already exporting variable(s): demux_fastq_dir, trimmed_fastq_dir
+2: In for (i in seq_len(n)) { :
+  closing unused connection 10 (<-localhost.localdomain:11901)
+3: In for (i in seq_len(n)) { :
+  closing unused connection 9 (<-localhost.localdomain:11901)
+4: In for (i in seq_len(n)) { :
+  closing unused connection 8 (<-localhost.localdomain:11901)
+5: In for (i in seq_len(n)) { :
+  closing unused connection 7 (<-localhost.localdomain:11901)
+6: In for (i in seq_len(n)) { :
+  closing unused connection 6 (<-localhost.localdomain:11901)
+7: In for (i in seq_len(n)) { :
+  closing unused connection 5 (<-localhost.localdomain:11901)
+8: In for (i in seq_len(n)) { :
+  closing unused connection 4 (<-localhost.localdomain:11901)
+9: In for (i in seq_len(n)) { :
+  closing unused connection 3 (<-localhost.localdomain:11901)
+$main_log_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs/"
+
+$raw_fastq_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//reads/"
+
+$demux_index_file
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//demux_index.txt"
+
+$demux_fastq_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//demux_fastq/"
+
+$trimmed_fastq_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/"
+
+$alignment_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//alignments/"
+
+$methylation_calls_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//methylation_calls/"
+
+$summary_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//summary/"
+
+$plot_dir
+[1] "/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//plots/"
+
+$sample_name
+[1] "Test"
+
+$df_demux_reports
+                          Group Total_reads Reads_with_matching_index
+Batch1___Lane01 Batch1___Lane01    23189895                  22322810
+Batch2___Lane10 Batch2___Lane10    11493001                  11199406
+                Reads_without_matching_index  CGATGT  TAGCTT  TGACCA  GCCAAT
+Batch1___Lane01                       867085 2697288 3044397 3047886 2396650
+Batch2___Lane10                       293595 1072248 1617483 1010357 1565710
+                 CAGATC  ACTTGA  CTTGTA  ATCACG
+Batch1___Lane01 2979879 2566893 2422075 3167742
+Batch2___Lane10 1622009 1420252 1596971 1294376
+
+$demux_read_counts
+Batch1___Lane01_ACTTGA Batch1___Lane01_ATCACG Batch1___Lane01_CAGATC 
+               2566893                3167742                2979879 
+Batch1___Lane01_CGATGT Batch1___Lane01_CTTGTA Batch1___Lane01_GCCAAT 
+               2697288                2422075                2396650 
+Batch1___Lane01_TAGCTT Batch1___Lane01_TGACCA Batch2___Lane10_ACTTGA 
+               3044397                3047886                1420252 
+Batch2___Lane10_ATCACG Batch2___Lane10_CAGATC Batch2___Lane10_CGATGT 
+               1294376                1622009                1072248 
+Batch2___Lane10_CTTGTA Batch2___Lane10_GCCAAT Batch2___Lane10_TAGCTT 
+               1596971                1565710                1617483 
+Batch2___Lane10_TGACCA 
+               1010357 
+
+$trimmed_read_counts
+Batch1___Lane01_ACTTGA Batch1___Lane01_ATCACG Batch1___Lane01_CAGATC 
+               2313909                2873225                2800938 
+Batch1___Lane01_CGATGT Batch1___Lane01_CTTGTA Batch1___Lane01_GCCAAT 
+               2355372                2084776                2233225 
+Batch1___Lane01_TAGCTT Batch1___Lane01_TGACCA Batch2___Lane10_ACTTGA 
+               2875940                2689797                1412250 
+Batch2___Lane10_ATCACG Batch2___Lane10_CAGATC Batch2___Lane10_CGATGT 
+               1285604                1616004                1053956 
+Batch2___Lane10_CTTGTA Batch2___Lane10_GCCAAT Batch2___Lane10_TAGCTT 
+               1578842                1551535                1609913 
+Batch2___Lane10_TGACCA 
+                999957 
+
+attr(,"class")
+[1] "Sinbad"
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+starting worker for localhost:11901 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+Loading required package: SINBAD
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+loaded SINBAD and set parent environment
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+Type: EXEC 
+** fastq_file:  Batch1___Lane01_CAGATC.fastq.gz 
+** fastq_file:  Batch1___Lane01_ACTTGA.fastq.gz 
+** fastq_file: ** fastq_file:   Batch1___Lane01_GCCAAT.fastq.gzBatch1___Lane01_ATCACG.fastq.gz  
+
+** fastq_file:  Batch1___Lane01_CGATGT.fastq.gz 
+** fastq_file:  Batch1___Lane01_CTTGTA.fastq.gz 
+Type: EXEC 
+[1] "align_cell"
+ -- fastq_file:  Batch1___Lane01_CAGATC.fastq.gz 
+[1] "align_cell"
+[1][1] -- fastq_file:   "align_cell"Batch1___Lane01_ACTTGA.fastq.gz
+ ** fastq_file:  "align_cell"
+ 
+Batch1___Lane01_TAGCTT.fastq.gz -- fastq_file:   
+[1]Batch1___Lane01_GCCAAT.fastq.gz -- fastq_file:   [1]
+Batch1___Lane01_ATCACG.fastq.gz "align_cell" 
+
+ "align_cell"
+ -- fastq_file:  Batch1___Lane01_CGATGT.fastq.gz -- fastq_file:   
+Batch1___Lane01_CTTGTA.fastq.gz 
+Type: EXEC 
+[1] "align_cell"
+ -- fastq_file:  Batch1___Lane01_TAGCTT.fastq.gz 
+** fastq_file:  Batch1___Lane01_TGACCA.fastq.gz 
+[1] "align_cell"
+ -- fastq_file:  Batch1___Lane01_TGACCA.fastq.gz 
+Aligning  Batch1___Lane01_CAGATC.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch1___Lane01_CAGATC --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_CAGATC.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch1___Lane01_CAGATC.fastq.gz.log"
+Aligning  Batch1___Lane01_ACTTGA.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch1___Lane01_ACTTGA --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_ACTTGA.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch1___Lane01_ACTTGA.fastq.gz.log"
+Aligning  Batch1___Lane01_GCCAAT.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch1___Lane01_GCCAAT --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_GCCAAT.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch1___Lane01_GCCAAT.fastq.gz.log"
+Aligning  Batch1___Lane01_ATCACG.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch1___Lane01_ATCACG --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_ATCACG.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch1___Lane01_ATCACG.fastq.gz.log"
+Aligning  Batch1___Lane01_CTTGTA.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch1___Lane01_CTTGTA --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_CTTGTA.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch1___Lane01_CTTGTA.fastq.gz.log"
+Aligning  Batch1___Lane01_CGATGT.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch1___Lane01_CGATGT --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_CGATGT.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch1___Lane01_CGATGT.fastq.gz.log"
+Aligning  Batch1___Lane01_TAGCTT.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch1___Lane01_TAGCTT --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_TAGCTT.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch1___Lane01_TAGCTT.fastq.gz.log"
+Aligning  Batch1___Lane01_TGACCA.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch1___Lane01_TGACCA --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_TGACCA.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch1___Lane01_TGACCA.fastq.gz.log"
+Path to Bowtie 2 specified as: bowtie2
+Path to Bowtie 2 specified as: bowtie2
+Path to Bowtie 2 specified as: bowtie2
+Path to Bowtie 2 specified as: bowtie2
+Path to Bowtie 2 specified as: bowtie2
+Path to Bowtie 2 specified as: bowtie2
+Path to Bowtie 2 specified as: bowtie2
+Path to Bowtie 2 specified as: bowtie2
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Output format is BAM (default)
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_CTTGTA.fastq.gz
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_CGATGT.fastq.gz
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_CAGATC.fastq.gz
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_ACTTGA.fastq.gz
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_TGACCA.fastq.gz
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_TAGCTT.fastq.gz
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_ATCACG.fastq.gz
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_GCCAAT.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Setting parallelization to single-threaded (default)
+
+Setting parallelization to single-threaded (default)
+
+Setting parallelization to single-threaded (default)
+
+Setting parallelization to single-threaded (default)
+
+Setting parallelization to single-threaded (default)
+
+Setting parallelization to single-threaded (default)
+
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch1___Lane01_ATCACG.fastq.gz to Batch1___Lane01_ATCACG.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch1___Lane01_ATCACG.fastq.gz (2873225 sequences in total)
+
+Input file is Batch1___Lane01_ATCACG.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch1___Lane01_ATCACG.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch1___Lane01_CTTGTA.fastq.gz to Batch1___Lane01_CTTGTA.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch1___Lane01_CTTGTA.fastq.gz (2084776 sequences in total)
+
+Input file is Batch1___Lane01_CTTGTA.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch1___Lane01_CTTGTA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch1___Lane01_TGACCA.fastq.gz to Batch1___Lane01_TGACCA.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch1___Lane01_TGACCA.fastq.gz (2689797 sequences in total)
+
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch1___Lane01_TAGCTT.fastq.gz to Batch1___Lane01_TAGCTT.fastq.gz_G_to_A.fastq
+Input file is Batch1___Lane01_TGACCA.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch1___Lane01_TGACCA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+
+Created G -> A converted version of the FastQ file Batch1___Lane01_TAGCTT.fastq.gz (2875940 sequences in total)
+
+Input file is Batch1___Lane01_TAGCTT.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch1___Lane01_TAGCTT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch1___Lane01_GCCAAT.fastq.gz to Batch1___Lane01_GCCAAT.fastq.gz_G_to_A.fastq
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch1___Lane01_CGATGT.fastq.gz to Batch1___Lane01_CGATGT.fastq.gz_G_to_A.fastq
+Writing a G -> A converted version of the input file Batch1___Lane01_CAGATC.fastq.gz to Batch1___Lane01_CAGATC.fastq.gz_G_to_A.fastq
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch1___Lane01_ACTTGA.fastq.gz to Batch1___Lane01_ACTTGA.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch1___Lane01_GCCAAT.fastq.gz (2233225 sequences in total)
+
+
+Created G -> A converted version of the FastQ file Batch1___Lane01_CGATGT.fastq.gz (2355372 sequences in total)
+
+Input file is Batch1___Lane01_GCCAAT.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch1___Lane01_GCCAAT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+
+Created G -> A converted version of the FastQ file Batch1___Lane01_CAGATC.fastq.gz (2800938 sequences in total)
+
+Input file is Batch1___Lane01_CGATGT.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch1___Lane01_CGATGT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Input file is Batch1___Lane01_CAGATC.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch1___Lane01_CAGATC.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+
+Created G -> A converted version of the FastQ file Batch1___Lane01_ACTTGA.fastq.gz (2313909 sequences in total)
+
+Input file is Batch1___Lane01_ACTTGA.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch1___Lane01_ACTTGA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:10493:1079_1:N:0:ATTACTCG+AGGCTATA	16	chr3_CT_converted	85038255	42	134M	*	0	0	GGTTTTTTTATATATAAAGTAAAGGATATTTATGTATATTATAGATTGTTTAGTGAAAATTAAATAAGAAAATATATGATATGTGTAAAGTTAGTTTAGTTTATATTTTAGAATATAATAAGTATTTAATATAT	EE/EEEEEEEAE/EAEEEEEEEEEEEEEEEEEEAEEEEEAEAEEEEEE<AAEEEEEEEEE/EEEAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEAEE	AS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:134	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch1___Lane01_ATCACG.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:25252:1105_1:N:0:ATTACTCG+AGGCTATA	4	*	0	0	*	*	0	0	AAATATTAAATAAATACCATCTATAATTAACTAAAAATTATCAAATACCATATTTATAACACTTAATACCTTTTTAACTTTTTTTAAATTAATTTACAATAACAAACAAAAAAAAAAACAATACTTTTTTCTTT	EEEEEEEEEEEEEEE/EEEEEEEEEEEEEEEEEEEEEEEEEEA<6EAEEEEEEEEEEE<<EEE/EA<EAEEEEEEE<EEEEEEEEEAAEEEEEEEAAE/<E/EEE/EEE<EEEE<E</EEEAEEEEEEEEEEAA	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch1___Lane01_CTTGTA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:26051:1066_1:N:0:ATTACTCG+AGGCTATA	16	chrX_CT_converted	72121801	40	134M	*	0	0	TTTATGAATTTTAAATAATAATTTAGTATTTTTTTAAATTAGGAATGTAAGTGATAAATTGTAGTAGTGTTAGTGGTATTTGTGATTTTATTATTAATAGAAATTATAAATATTTTTATATTATATTATTGTTG	<<EEAAEEEAAEEEEAEE<EE<EEEEEEEEEEEE<EEE<<AEE<E<A/EEEAEEEEEE/AAEEEEEEEEEAEEEE<EEA<<EA/EEAEAEE/EEEEEEEEAEEEEEEEEEAEEEEEAEEEAEEEEEEEEEEEEE	AS:i:-6	XN:i:0	XM:i:1	XO:i:0	XG:i:0	NM:i:1	MD:Z:60A73	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch1___Lane01_TGACCA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:12371:1078_1:N:0:ATTACTCG+AGGCTATA	4	*	0	0	*	*	0	0	CAAAAAAAACAACAAAAAATATTCATTTAAACTAAATCCTTTAAATTTCTCCAAAAATATTATTTTTCCTAAAAATATAAAAAAAATAATAAATAATAAAACTCAAACACTTCAAAATAATTACAAAATTCTA	EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEAEEEEEEEEEEE<EEEEEEEAAAAAEEE///EEAA//AEEEAEAAA<EE<AEEEEAE/EEEEE	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch1___Lane01_TAGCTT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:12962:1060_1:N:0:ATTACTCG+NGGCTATA	16	chr6_CT_converted	84321469	0	22M1D111M	*	0	0	GTTGTNANATNANTGNTNANGGTTAGAGGNGGTTTTGTTGTTTTAAATGTGAGTTAAGTTTGAAATTTATTGGTAGAGGTGTTTTTGGTTTTGTTGAATGGAGTTTTTATTGTAGGGTGAGAAATTTTGTTTA	E<<AA#/#E/#E#AE#A#A#AE//EEAA/#6E//EAA<<E</EEEEEEEEEE/AEEEEE/EEEEAE/EEEEEEAEEEEEAE///AEEE/E/EE//E/EAAEE/E/AEEEEEEEAE/</EEEEE/EEEEEEEEE	AS:i:-22	XN:i:0	XM:i:9	XO:i:1	XG:i:1	NM:i:10	MD:Z:5T1T2T1T2A1T1T2^T7A72T30	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch1___Lane01_GCCAAT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:15381:1063_1:N:0:ATTACTCG+NGGCTATA	16	chrLambda_CT_converted	10220	0	6M2D128M	*	0	0	GGGGATNTTTTATAGTATTTATTATTTTTATGATGTTTTGTTGGATATGTATTTTTTTGGGTTGATGTATATTGTGTTTAGTTTGTTTTTTAGTGATTTGGATATGTATTTGTTGGATTTTAGTTTGTTGAATT	EA/EEE#EEEEEAEEEAAEEEEEEEEE<E/EEEEEAEEEA/AA<EA<AEEEE<EEE/EAEE/AEEEE/EEEEEEEEAEEEEAEEEEEAEEEEEEEEEEAEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEE	AS:i:-24	XN:i:0	XM:i:3	XO:i:1	XG:i:2	NM:i:5	MD:Z:0T2T2^TG0T127	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch1___Lane01_CGATGT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:15432:1059_1:N:0:ATTACTCG+NGGCTATA	4	*	0	0	*	*	0	0	AATCAAACAAATAATCACTTTTATAATATCAACATTAATACTAATAATATAAAATATAAATTTCTAACTAAAATTCAAAACATAAAAAATAACCNAAAAAAAANTAAAATACTNCNANANNNNNANCNACCAAA	EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEE6EEEE<EEEEEE/EEAEEE/E/<EEEE<#A//EA/E<#AEEEAEEEE#/#E#/#####/#<#<EAAEE	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch1___Lane01_CAGATC.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:10589:1142_1:N:0:ATTACTCG+AGGCTATA	4	*	0	0	*	*	0	0	TTAATATACTAACCAAAACAATTAAACAAAAAAAAAAAATAAAACACTTCCAAATCAAAATAAAAAAAATTAAACTATTTACTAATAACATAACCTTATATATAAAAATTATTTAAAACCCCACAAAAAAACTA	EEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAAEEEEEEAEEEAEEEAEEEEEAEEEEEEAAEEAEAEEEAEEAEEEEEEEAEE/EEEEEEEEEEEAEEEA	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch1___Lane01_ACTTGA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:25252:1105_1:N:0:ATTACTCG+AGGCTATA	0	chr12_GA_converted	75712578	24	107M1D27M	*	0	0	AAATATTAAATAAATACCATCTATAATTAACTAAAAATTATCAAATACCATATTTATAACACTTAATACCTTTTTAACTTTTTTTAAATTAATTTACAATAACAAACAAAAAAAAAAACAATACTTTTTTCTTT	EEEEEEEEEEEEEEE/EEEEEEEEEEEEEEEEEEEEEEEEEEA<6EAEEEEEEEEEEE<<EEE/EA<EAEEEEEEE<EEEEEEEEEAAEEEEEEEAAE/<E/EEE/EEE<EEEE<E</EEEAEEEEEEEEEEAA	AS:i:-8	XN:i:0	XM:i:0	XO:i:1	XG:i:1	NM:i:1	MD:Z:107^A27	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch1___Lane01_CTTGTA.bam <<<
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:10493:1079_1:N:0:ATTACTCG+AGGCTATA	4	*	0	0	*	*	0	0	ATATATTAAATACTTATTATATTCTAAAATATAAACTAAACTAACTTTACACATATCATATATTTTCTTATTTAATTTTCACTAAACAATCTATAATATACATAAATATCCTTTACTTTATATATAAAAAAACC	EEAEEEAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEE/EEEEEEEEEAA<EEEEEEAEAEEEEEAEEEEEEEEEEEEEEEEEEAE/EAEEEEEEE/EE	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch1___Lane01_ATCACG.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_CTTGTA.fastq.gz
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_ATCACG.fastq.gz
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:26051:1066_1:N:0:ATTACTCG+AGGCTATA	4	*	0	0	*	*	0	0	CAACAATAATATAATATAAAAATATTTATAATTTCTATTAATAATAAAATCACAAATACCACTAACACTACTACAATTTATCACTTACATTCCTAATTTAAAAAAATACTAAATTATTATTTAAAATTCATAAA	EEEEEEEEEEEEEAEEEAEEEEEAEEEEEEEEEAEEEEEEEE/EEAEAEE/AE<<AEE<EEEEAEEEEEEEEEAA/EEEEEEAEEE/A<E<EEA<<EEE<EEEEEEEEEEEE<EE<EEAEEEEAAEEEAAEE<<	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch1___Lane01_TGACCA.bam <<<
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:12371:1078_1:N:0:ATTACTCG+AGGCTATA	4	*	0	0	*	*	0	0	CAAAAAAAACAACAAAAAATATTCATTTAAACTAAATCCTTTAAATTTCTCCAAAAATATTATTTTTCCTAAAAATATAAAAAAAATAATAAATAATAAAACTCAAACACTTCAAAATAATTACAAAATTCTA	EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEAEEEEEEEEEEE<EEEEEEEAAAAAEEE///EEAA//AEEEAEAAA<EE<AEEEEAE/EEEEE	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch1___Lane01_TAGCTT.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_TGACCA.fastq.gz
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_TAGCTT.fastq.gz
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:12962:1060_1:N:0:ATTACTCG+NGGCTATA	4	*	0	0	*	*	0	0	TAAACAAAATTTCTCACCCTACAATAAAAACTCCATTCAACAAAACCAAAAACACCTCTACCAATAAATTTCAAACTTAACTCACATTTAAAACAACAAAACCNCCTCTAACCNTNANCANTNATNTNACAAC	EEEEEEEEE/EEEEE/</EAEEEEEEEA/E/EEAAE/E//EE/E/EEEA///EAEEEEEAEEEEEE/EAEEEE/EEEEEA/EEEEEEEEEE/<E<<AAE//E6#/AAEE//EA#A#A#EA#E#/E#/#AA<<E	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch1___Lane01_GCCAAT.bam <<<
+
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:10589:1142_1:N:0:ATTACTCG+AGGCTATA	0	chr2_GA_converted	229498406	42	134M	*	0	0	TTAATATACTAACCAAAACAATTAAACAAAAAAAAAAAATAAAACACTTCCAAATCAAAATAAAAAAAATTAAACTATTTACTAATAACATAACCTTATATATAAAAATTATTTAAAACCCCACAAAAAAACTA	EEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAAEEEEEEAEEEAEEEAEEEEEAEEEEEEAAEEAEAEEEAEEAEEEEEEEAEE/EEEEEEEEEEEAEEEA	AS:i:0	XN:i:0	XM:i:0	XO:i:0	XG:i:0	NM:i:0	MD:Z:134	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch1___Lane01_ACTTGA.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_GCCAAT.fastq.gz
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_ACTTGA.fastq.gz
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:15381:1063_1:N:0:ATTACTCG+NGGCTATA	4	*	0	0	*	*	0	0	AATTCAACAAACTAAAATCCAACAAATACATATCCAAATCACTAAAAAACAAACTAAACACAATATACATCAACCCAAAAAAATACATATCCAACAAAACATCATAAAAATAATAAATACTATAAAANATCCCC	EEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEAEEEEEEEEEEAEEEEEAEEEEAEEEEEEEE/EEEEA/EEAE/EEE<EEEEA<AE<AA/AEEEAEEEEE/E<EEEEEEEEEAAEEEAEEEEE#EEE/AE	YT:Z:UU
+Found first alignment:	NB551646:6:HYK7LBGX7:1:11101:15432:1059_1:N:0:ATTACTCG+NGGCTATA	4	*	0	0	*	*	0	0	AATCAAACAAATAATCACTTTTATAATATCAACATTAATACTAATAATATAAAATATAAATTTCTAACTAAAATTCAAAACATAAAAAATAACCNAAAAAAAANTAAAATACTNCNANANNNNNANCNACCAAA	EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEE6EEEE<EEEEEE/EEAEEE/E/<EEEE<#A//EA/E<#AEEEAEEEE#/#E#/#####/#<#<EAAEE	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch1___Lane01_CGATGT.bam <<<
+
+
+>>> Writing bisulfite mapping results to Batch1___Lane01_CAGATC.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_CGATGT.fastq.gz
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch1___Lane01_CAGATC.fastq.gz
+Chromosomal sequence could not be extracted for	NB551646:6:HYK7LBGX7:1:23302:23895:6118_1:N:0:ATTACTCG+AGGCTATA	chrM	16436
+Chromosomal sequence could not be extracted for	NB551646:6:HYK7LBGX7:3:21408:4821:19952_1:N:0:ATTACTCG+AGGCTATA	chrM	1
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Processed 1000000 sequences so far
+Chromosomal sequence could not be extracted for	NB551646:36:HHG52BGXB:3:21401:4370:12669_1:N:0:ATTACTCG+AGGCTATA	chrM	1
+Chromosomal sequence could not be extracted for	NB551646:37:HHG5FBGXB:1:13107:18915:15889_1:N:0:ATTACTCG+AGGCTATA	chrM	1
+Chromosomal sequence could not be extracted for	NB551646:37:HHG5FBGXB:3:21412:4119:2417_1:N:0:ATTACTCG+AGGCTATA	chrM	16435
+Processed 2000000 sequences so far
+Chromosomal sequence could not be extracted for	NB551646:36:HHG52BGXB:4:13407:24102:11520_1:N:0:ATTACTCG+AGGCTATA	chrM	16436
+Processed 2000000 sequences so far
+Processed 2000000 sequences so far
+Processed 2000000 sequences so far
+2084776 reads; of these:
+  2084776 (100.00%) were unpaired; of these:
+    1543790 (74.05%) aligned 0 times
+    467487 (22.42%) aligned exactly 1 time
+    73499 (3.53%) aligned >1 times
+25.95% overall alignment rate
+2084776 reads; of these:
+  2084776 (100.00%) were unpaired; of these:
+    1536858 (73.72%) aligned 0 times
+    473833 (22.73%) aligned exactly 1 time
+    74085 (3.55%) aligned >1 times
+26.28% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_CTTGTA.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2084776
+Number of alignments with a unique best hit from the different alignments:	944612
+Mapping efficiency:	45.3%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	26607477
+
+Total methylated C's in CpG context:	861619
+Total methylated C's in CHG context:	372001
+Total methylated C's in CHH context:	1225055
+Total methylated C's in Unknown context:	794
+
+Total unmethylated C's in CpG context:	1330396
+Total unmethylated C's in CHG context:	5554888
+Total unmethylated C's in CHH context:	17263518
+Total unmethylated C's in Unknown context:	8194
+
+C methylated in CpG context:	39.3%
+C methylated in CHG context:	6.3%
+C methylated in CHH context:	6.6%
+C methylated in Unknown context (CN or CHN):	8.8%
+
+
+Bismark completed in 0d 1h 15m 29s
+
+====================
+Bismark run complete
+====================
+
+Processed 2000000 sequences so far
+Processed 2000000 sequences so far
+Read filtering is successful for cell  Batch1___Lane01_CTTGTA 
+Using  picard  to remove duplicates...[Wed Aug 12 17:31:49 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_CTTGTA.mapq_filtered.bam OUTPUT=Batch1___Lane01_CTTGTA.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Wed Aug 12 17:31:49 EDT 2020] Executing as uzuny@m-2-02 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-12 17:32:04	SortSam	Finished reading inputs, merging and writing to output now.
+Processed 2000000 sequences so far
+[Wed Aug 12 17:32:31 EDT 2020] picard.sam.SortSam done. Elapsed time: 0.70 minutes.
+Runtime.totalMemory()=2595749888
+Sorted alignments for cell  Batch1___Lane01_CTTGTA 
+[Wed Aug 12 17:32:34 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch1___Lane01_CTTGTA.sorted.bam] OUTPUT=Batch1___Lane01_CTTGTA.rmdup.bam METRICS_FILE=Batch1___Lane01_CTTGTA.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Wed Aug 12 17:32:34 EDT 2020] Executing as uzuny@m-2-02 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-12 17:32:34	MarkDuplicates	Start of doWork freeMemory: 2045992280; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-12 17:32:34	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-12 17:32:34	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-12 17:32:35	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:36:HHG52BGXB:3:12512:23894:19312_1:N:0:ATTACTCG+AGGCTATA. Cause: String 'ATTACTCG+AGGCTATA' did not start with a parsable number.
+INFO	2020-08-12 17:32:49	MarkDuplicates	Read 842549 records. 0 pairs never matched.
+INFO	2020-08-12 17:32:51	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2494933088; totalMemory: 3461349376; maxMemory: 28631367680
+INFO	2020-08-12 17:32:51	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2020-08-12 17:32:57	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-12 17:32:57	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-12 17:32:57	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-12 17:32:59	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3442131200; totalMemory: 10624696320; maxMemory: 28631367680
+INFO	2020-08-12 17:32:59	MarkDuplicates	Marking 190350 records as duplicates.
+INFO	2020-08-12 17:32:59	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-12 17:32:59	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2020-08-12 17:33:28	MarkDuplicates	Before output close freeMemory: 10980813928; totalMemory: 11013718016; maxMemory: 28631367680
+INFO	2020-08-12 17:33:28	MarkDuplicates	After output close freeMemory: 10969278640; totalMemory: 11002183680; maxMemory: 28631367680
+[Wed Aug 12 17:33:28 EDT 2020] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.91 minutes.
+Runtime.totalMemory()=11002183680
+Removed duplicate reads for cell  Batch1___Lane01_CTTGTA 
+Filtering nonconversion reads  : Batch1___Lane01_CTTGTA 
+Processing single-end Bismark output file(s) (SAM format):
+Batch1___Lane01_CTTGTA.rmdup.bam
+
+Checking file >>Batch1___Lane01_CTTGTA.rmdup.bam<< for signs of file truncation...
+
+
+Trying to determine the type of mapping from the SAM header line
+Treating file as single-end data (extracted from @PG line)
+Treating file as single-end data (extracted from @PG line)
+
+Using a threshold of >> 3 << methylation calls in non-CG context before a read gets removed
+
+NON-CONVERSION SUMMARY
+======================
+Analysed sequences (single-end) in file >> Batch1___Lane01_CTTGTA.rmdup.bam << in total:	652199
+Sequences removed because of apparent non-bisulfite conversion (at least 3 consecutive non-CG calls per read):	45240 (6.9%)
+
+Please continue with deduplication or methylation extraction now (depending on your application)
+
+filter_non_conversion completed in 0d 0h 1m 40s
+
+Non-conversion filtering is successful for cell  Batch1___Lane01_CTTGTA 
+[main_samview] region "chrlambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "Lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "L" specifies an unknown reference name. Continue anyway.
+Lambda control split is successful for cell  Batch1___Lane01_CTTGTA 
+Type: EXEC 
+** fastq_file:  Batch2___Lane10_ACTTGA.fastq.gz 
+[1] "align_cell"
+ -- fastq_file:  Batch2___Lane10_ACTTGA.fastq.gz 
+Aligning  Batch2___Lane10_ACTTGA.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch2___Lane10_ACTTGA --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_ACTTGA.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch2___Lane10_ACTTGA.fastq.gz.log"
+Path to Bowtie 2 specified as: bowtie2
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_ACTTGA.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Processed 2000000 sequences so far
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch2___Lane10_ACTTGA.fastq.gz to Batch2___Lane10_ACTTGA.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch2___Lane10_ACTTGA.fastq.gz (1412250 sequences in total)
+
+Input file is Batch2___Lane10_ACTTGA.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch2___Lane10_ACTTGA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:6350:1053_1:N:0:TAATGCGC+NCCTCTAT	16	chr11_CT_converted	77343456	42	134M	*	0	0	AATAAATAATANGTTATTTAGGAGGATGAGNAGAATAAGGAAAGATTTGGGATGTAANATGAGTTAAGGATTTAGATGTTTGNTTTAGGTAGATGGGTTGGTAGGTTTTTTTTAGGTAAAATAAATAGTATGAG	EEEEEEAEAA<#6EEEEEEEAEEE<EAAEA#EAEEEEEA<EEEEEEEEEAEE/EEEA#EEEEEEEEEEEEEEEEEEEEE<E<#EEEEEEEEEEEEEEA<AEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEEAEE	AS:i:-4	XN:i:0	XM:i:4	XO:i:0	XG:i:0	NM:i:4	MD:Z:11A18T26A24A51	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch2___Lane10_ACTTGA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:6350:1053_1:N:0:TAATGCGC+NCCTCTAT	4	*	0	0	*	*	0	0	CTCATACTATTTATTTTACCTAAAAAAAACCTACCAACCCATCTACCTAAANCAAACATCTAAATCCTTAACTCATNTTACATCCCAAATCTTTCCTTATTCTNCTCATCCTCCTAAATAACNTATTATTTATT	EEAEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEA<AEEEEEEEEEEEEEE#<E<EEEEEEEEEEEEEEEEEEEEE#AEEE/EEAEEEEEEEEE<AEEEEEAE#AEAAE<EEEAEEEEEEE6#<AAEAEEEEEE	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch2___Lane10_ACTTGA.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_ACTTGA.fastq.gz
+2233225 reads; of these:
+  2233225 (100.00%) were unpaired; of these:
+    1551158 (69.46%) aligned 0 times
+    584335 (26.17%) aligned exactly 1 time
+    97732 (4.38%) aligned >1 times
+30.54% overall alignment rate
+2233225 reads; of these:
+  2233225 (100.00%) were unpaired; of these:
+    1556245 (69.69%) aligned 0 times
+    580464 (25.99%) aligned exactly 1 time
+    96516 (4.32%) aligned >1 times
+30.31% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_GCCAAT.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2233225
+Number of alignments with a unique best hit from the different alignments:	1170184
+Mapping efficiency:	52.4%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	32749543
+
+Total methylated C's in CpG context:	1081974
+Total methylated C's in CHG context:	120596
+Total methylated C's in CHH context:	381675
+Total methylated C's in Unknown context:	736
+
+Total unmethylated C's in CpG context:	1387666
+Total unmethylated C's in CHG context:	7077117
+Total unmethylated C's in CHH context:	22700515
+Total unmethylated C's in Unknown context:	10286
+
+C methylated in CpG context:	43.8%
+C methylated in CHG context:	1.7%
+C methylated in CHH context:	1.7%
+C methylated in Unknown context (CN or CHN):	6.7%
+
+
+Bismark completed in 0d 1h 23m 3s
+
+====================
+Bismark run complete
+====================
+
+Read filtering is successful for cell  Batch1___Lane01_GCCAAT 
+Using  picard  to remove duplicates...[Wed Aug 12 17:39:32 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_GCCAAT.mapq_filtered.bam OUTPUT=Batch1___Lane01_GCCAAT.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Wed Aug 12 17:39:32 EDT 2020] Executing as uzuny@m-2-02 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-12 17:39:53	SortSam	Finished reading inputs, merging and writing to output now.
+2313909 reads; of these:
+  2313909 (100.00%) were unpaired; of these:
+    1633122 (70.58%) aligned 0 times
+    586045 (25.33%) aligned exactly 1 time
+    94742 (4.09%) aligned >1 times
+29.42% overall alignment rate
+2313909 reads; of these:
+  2313909 (100.00%) were unpaired; of these:
+    1629108 (70.41%) aligned 0 times
+    589475 (25.48%) aligned exactly 1 time
+    95326 (4.12%) aligned >1 times
+29.59% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_ACTTGA.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2313909
+Number of alignments with a unique best hit from the different alignments:	1180728
+Mapping efficiency:	51.0%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	32806230
+
+Total methylated C's in CpG context:	1101306
+Total methylated C's in CHG context:	405355
+Total methylated C's in CHH context:	1349208
+Total methylated C's in Unknown context:	822
+
+Total unmethylated C's in CpG context:	1187221
+Total unmethylated C's in CHG context:	6794091
+Total unmethylated C's in CHH context:	21969049
+Total unmethylated C's in Unknown context:	10079
+
+C methylated in CpG context:	48.1%
+C methylated in CHG context:	5.6%
+C methylated in CHH context:	5.8%
+C methylated in Unknown context (CN or CHN):	7.5%
+
+
+Bismark completed in 0d 1h 24m 49s
+
+====================
+Bismark run complete
+====================
+
+[Wed Aug 12 17:40:31 EDT 2020] picard.sam.SortSam done. Elapsed time: 0.99 minutes.
+Runtime.totalMemory()=3670540288
+Sorted alignments for cell  Batch1___Lane01_GCCAAT 
+[Wed Aug 12 17:40:34 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch1___Lane01_GCCAAT.sorted.bam] OUTPUT=Batch1___Lane01_GCCAAT.rmdup.bam METRICS_FILE=Batch1___Lane01_GCCAAT.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Wed Aug 12 17:40:34 EDT 2020] Executing as uzuny@m-2-02 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-12 17:40:34	MarkDuplicates	Start of doWork freeMemory: 2045991296; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-12 17:40:34	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-12 17:40:34	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-12 17:40:35	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:6:HYK7LBGX7:3:11401:6203:17384_1:N:0:ATTACTCG+AGGCTATA. Cause: String 'ATTACTCG+AGGCTATA' did not start with a parsable number.
+INFO	2020-08-12 17:40:49	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:13s.  Time for last 1,000,000:   13s.  Last read position: chrX:11,630,998
+INFO	2020-08-12 17:40:49	MarkDuplicates	Tracking 0 as yet unmatched pairs. 0 records in RAM.
+INFO	2020-08-12 17:40:49	MarkDuplicates	Read 1044553 records. 0 pairs never matched.
+INFO	2020-08-12 17:40:51	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2506876584; totalMemory: 3488088064; maxMemory: 28631367680
+INFO	2020-08-12 17:40:51	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2020-08-12 17:40:55	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-12 17:40:55	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-12 17:40:55	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-12 17:40:57	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3484871912; totalMemory: 10667687936; maxMemory: 28631367680
+INFO	2020-08-12 17:40:57	MarkDuplicates	Marking 221906 records as duplicates.
+INFO	2020-08-12 17:40:57	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-12 17:40:57	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+Read filtering is successful for cell  Batch1___Lane01_ACTTGA 
+Using  picard  to remove duplicates...[Wed Aug 12 17:41:24 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_ACTTGA.mapq_filtered.bam OUTPUT=Batch1___Lane01_ACTTGA.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Wed Aug 12 17:41:24 EDT 2020] Executing as uzuny@m-2-02 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)

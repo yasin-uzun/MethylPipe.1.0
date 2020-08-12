@@ -51,7 +51,7 @@ print(sinbad_object)
 
 
 #Align
-sinbad_object = readRDS("/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//sinbad_object.02.rds")
+sinbad_object = readRDS("/mnt/isilon/tan_lab/yuw1/projects/sinbad/data/example//working_dir//sinbad_object.01.rds")
 sinbad_object = wrap_align_sample(sinbad_object)
 
 

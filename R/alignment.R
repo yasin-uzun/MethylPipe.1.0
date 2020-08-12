@@ -102,7 +102,7 @@ align_cell <- function(read_dir, fastq_file, aligner, genomic_sequence_path,
     stop(msg)
   }
 
-
+  gc()
   #
   #
   #Mapq filtering
@@ -117,15 +117,26 @@ align_cell <- function(read_dir, fastq_file, aligner, genomic_sequence_path,
     use_mapq_filtered_reads = T
   }
 
+  gc()
+
+
   remove_duplicate_reads(alignment_dir = alignment_dir,
                          cell_id = cell_id,
                          use_mapq_filtered_reads = use_mapq_filtered_reads,
                          duplicate_remover = 'picard', log_dir = log_dir)
+  gc()
+
 
   filter_non_conversion(alignment_dir = alignment_dir,
                         cell_id = cell_id, log_dir = log_dir)
 
+  gc()
+
+
   split_lambda(alignment_dir = alignment_dir, cell_id = cell_id, log_dir = log_dir)
+
+  gc()
+
 
 
 

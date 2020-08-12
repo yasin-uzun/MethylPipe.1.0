@@ -1,5 +1,5 @@
-library(devtools)
-install_github("yasin-uzun/SINBAD.1.0")
+#library(devtools)
+#install_github("yasin-uzun/SINBAD.1.0")
 
 library(SINBAD)
 SINBAD::test()
@@ -15,8 +15,8 @@ working_dir = paste0(example_dir, '/working_dir/')
 library(doSNOW)
 
 
-source('/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/p99/MethylProc/R/Main.R')
-source('/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/p99/MethylProc/R/alignment.R')
+#source('/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/p99/MethylProc/R/Main.R')
+#source('/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/p99/MethylProc/R/alignment.R')
 
 sample_name <- 'Test'
 sinbad_object = construct_sinbad_object(working_dir = working_dir,
