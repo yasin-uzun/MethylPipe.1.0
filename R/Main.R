@@ -13,8 +13,7 @@ read_configs <- function(config_dir)
   source(paste0(config_dir, 'config.general.R') )
   print('Reading config.genome.R for genome paths...')
   source(paste0(config_dir, 'config.genome.R') )
-  print('Reading config.project.R for prroject settings...')
-
+  print('Reading config.project.R for project settings...')
   source(paste0(config_dir, 'config.project.R') )
   #system('echo $PATH')
 
@@ -128,42 +127,108 @@ wrap_align_sample <- function(sinbad_object)
                main_log_dir = sinbad_object$main_log_dir)
 
 
-  df_alignment_reports = process_bismark_alignment_reports(sinbad_object$alignment_dir)
-  df_bam_read_counts = count_bam_files(alignment_dir)
-  dim(df_alignment_reports)
-  dim(df_bam_read_counts)
+  sinbad_object$df_alignment_reports = process_bismark_alignment_reports(sinbad_object$alignment_dir)
+  sinbad_object$df_bam_read_counts = count_bam_files(sinbad_object$alignment_dir)
+  dim(sinbad_object$df_alignment_reports)
+  dim(sinbad_object$df_bam_read_counts)
 
 
-  df_alignment_stats = base::merge(df_alignment_reports, df_bam_read_counts, by = 0)
-  dim(df_alignment_stats)
-  head(df_alignment_stats)
+  sinbad_object$df_alignment_stats = base::merge(sinbad_object$df_alignment_reports,
+                                                 sinbad_object$df_bam_read_counts, by = 0)
+  dim(sinbad_object$df_alignment_stats)
+  head(sinbad_object$df_alignment_stats)
 
-  coverage_rates = compute_coverage_rates(alignment_dir)
-  df_alignment_stats$coverage_rate = coverage_rates[as.character(df_alignment_stats$Cell_ID)]
+  sinbad_object$coverage_rates = compute_coverage_rates(sinbad_object$alignment_dir)
+  sinbad_object$df_alignment_stats$coverage_rate = coverage_rates[as.character(df_alignment_stats$Cell_ID)]
 
-  df_alignment_stats$Row.names = NULL
-  rownames(df_alignment_stats) = df_alignment_stats$Cell_ID
-  alignment_summary_file = paste0(summary_dir, '/Alignment_statistics.tsv')
-  write.table(df_alignment_stats, file = alignment_summary_file, sep = '\t', quote = F, row.names = F, col.names = T)
+  sinbad_object$df_alignment_stats$Row.names = NULL
+  rownames(sinbad_object$df_alignment_stats) = sinbad_object$df_alignment_stats$Cell_ID
+  sinbad_object$alignment_summary_file = paste0(sinbad_object$summary_dir, '/Alignment_statistics.tsv')
+  write.table(sinbad_object$df_alignment_stats,
+              file = sinbad_object$alignment_summary_file,
+              sep = '\t', quote = F, row.names = F, col.names = T)
 
 
   plot_file = paste0(plot_dir, '/Alignment_statistics.eps')
-  postscript(plot_file, paper = 'a4', horizontal = F, title = sample_name)
-  plot_alignment_stats(sample_name, df_alignment_stats, coverage_rates)
+  postscript(plot_file, paper = 'a4', horizontal = F, title = sinbad_object$sample_name)
+  plot_alignment_stats(sinbad_object$sample_name, sinbad_object$df_alignment_stats, sinbad_object$coverage_rates)
   dev.off()
 
-  df_org_split_reports = process_bismark_split_reports(methylation_calls_dir, genome_type = 'organism')
-  df_lambda_split_reports = process_bismark_split_reports(methylation_calls_dir, genome_type = 'lambda')
+  plot_file = paste0(plot_dir, '/Alignment_statistics.png')
+  png(plot_file, width = 600, height = 800)
+  plot_alignment_stats(sinbad_object$sample_name, sinbad_object$df_alignment_stats, sinbad_object$coverage_rates)
+  dev.off()
 
-  list_org_bias_reports = process_bismark_bias_reports(methylation_calls_dir, genome_type = 'organism')
-  list_lambda_bias_reports = process_bismark_bias_reports(methylation_calls_dir, genome_type = 'lambda')
+  sinbad_object$df_org_split_reports = process_bismark_split_reports(sinbad_object$methylation_calls_dir,
+                                                                     genome_type = 'organism')
+  sinbad_object$df_lambda_split_reports = process_bismark_split_reports(sinbad_object$methylation_calls_dir,
+                                                                        genome_type = 'lambda')
+
+  sinbad_object$list_org_bias_reports = process_bismark_bias_reports(sinbad_object$methylation_calls_dir,
+                                                                     genome_type = 'organism')
+  sinbad_object$list_lambda_bias_reports = process_bismark_bias_reports(sinbad_object$methylation_calls_dir,
+                                                                        genome_type = 'lambda')
 
   plot_file = paste0(plot_dir, '/Met_call_statistics.eps')
-  postscript(plot_file, paper = 'a4', horizontal = F, title = sample_name)
-  plot_split_reports(df_org_split_reports, df_lambda_split_reports, list_org_bias_reports)
+  postscript(plot_file, paper = 'a4', horizontal = F, title = sinbad_object$sample_name)
+  plot_split_reports(sinbad_object$df_org_split_reports,
+                     sinbad_object$df_lambda_split_reports,
+                     sinbad_object$list_org_bias_reports)
   dev.off()
 
-  head(df_org_split_reports)
+  plot_file = paste0(plot_dir, '/Met_call_statistics.png')
+  png(plot_file, width = 600, height = 800)
+  plot_split_reports(sinbad_object$df_org_split_reports,
+                     sinbad_object$df_lambda_split_reports,
+                     sinbad_object$list_org_bias_reports)
+  dev.off()
+
+  return(sinbad_object)
+
+}
+
+wrap_call_methylation_sites <- function(sinbad_object)
+{
+  call_methylation_sites_for_sample(sinbad_object$alignment_dir,
+                                    sinbad_object$methylation_calls_dir,
+                                    sinbad_object$main_log_dir)
+
+  return(sinbad_object)
+}
+
+wrap_read_regions <- function(sinbad_object)
+{
+  #Read regions
+  sinbad_object$df_gene_annot = read_region_annot(gene_annot_file, format_file)
+  head(sinbad_object$df_gene_annot)
+  sinbad_object$df_promoters = get_promoters(df_gene_annot = sinbad_object$df_gene_annot)
+  sinbad_object$df_100k_bins = read_region_annot(bins_100k_file, format_file)
+  head(sinbad_object$df_100k_bins)
+  sinbad_object$df_10k_bins = read_region_annot(bins_10k_file, format_file)
+  head(sinbad_object$df_10k_bins)
+
+  return(sinbad_object)
+
+}
+
+wrap_quantify_regions <- function(sinbad_object)
+{
+
+  #Quantify methylation in regions
+  df_for_dim_red = sinbad_object$df_100k_bins
+  name_for_dim_red = '100k_bins'
+  df_for_features = sinbad_object$df_promoters
+  name_for_features = 'Promoters'
+
+  methylation_type = 'CpG'
+
+  met_mat_for_dim_red = compute_region_met_matrix(df_for_dim_red, sinbad_object$methylation_calls_dir,
+                                                  methylation_type = methylation_type,
+                                                  min_call_count_threshold = 10)
+
+  met_mat_for_features = compute_region_met_matrix(df_for_features, methylation_calls_dir,
+                                                   methylation_type = methylation_type,
+                                                   min_call_count_threshold = 10)
 
 }
 
@@ -179,32 +244,12 @@ process_sample_wrapper <- function(sinbad_object)
 
   sinbad_object = wrap_align_sample(sinbad_object)
 
+  sinbad_object = wrap_call_methylation_sites(sinbad_object)
 
-  #Call Methylation Sites
-  call_methylation_sites_for_sample(alignment_dir, methylation_calls_dir, main_log_dir)
+  sinbad_object = wrap_read_regions(sinbad_object)
 
-  #Read regions
-  df_gene_annot = read_region_annot(gene_annot_file, format_file)
-  head(df_gene_annot)
-  df_promoters = get_promoters(df_gene_annot = df_gene_annot)
-  df_100k_bins = read_region_annot(bins_100k_file, format_file)
-  head(df_100k_bins)
-  df_10k_bins = read_region_annot(bins_10k_file, format_file)
-  head(df_10k_bins)
+  sinbad_object = wrap_quantify_regions(sinbad_object)
 
-
-  #Quantify methylation in regions
-  df_for_dim_red = df_100k_bins
-  name_for_dim_red = '100k_bins'
-  df_for_features = df_promoters
-  name_for_features = 'Promoters'
-
-  met_mat_for_dim_red = compute_region_met_matrix(df_for_dim_red, methylation_calls_dir,
-                                                  methylation_type = methylation_type,
-                                                  min_call_count_threshold = 10)
-  met_mat_for_features = compute_region_met_matrix(df_for_features, methylation_calls_dir,
-                                                   methylation_type = methylation_type,
-                                                   min_call_count_threshold = 10)
 
   #Reduce dimensionality
   marker_genes = get_marker_genes('leuk')
