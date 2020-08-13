@@ -3510,3 +3510,1295 @@ Aligning  Batch2___Lane10_ACTTGA.fastq.gz
 Path to Bowtie 2 specified as: bowtie2
 Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
 Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_ACTTGA.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+2233225 reads; of these:
+  2233225 (100.00%) were unpaired; of these:
+    1551158 (69.46%) aligned 0 times
+    584335 (26.17%) aligned exactly 1 time
+    97732 (4.38%) aligned >1 times
+30.54% overall alignment rate
+2233225 reads; of these:
+  2233225 (100.00%) were unpaired; of these:
+    1556245 (69.69%) aligned 0 times
+    580464 (25.99%) aligned exactly 1 time
+    96516 (4.32%) aligned >1 times
+30.31% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_GCCAAT.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2233225
+Number of alignments with a unique best hit from the different alignments:	1170184
+Mapping efficiency:	52.4%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	32749543
+
+Total methylated C's in CpG context:	1081974
+Total methylated C's in CHG context:	120596
+Total methylated C's in CHH context:	381675
+Total methylated C's in Unknown context:	736
+
+Total unmethylated C's in CpG context:	1387666
+Total unmethylated C's in CHG context:	7077117
+Total unmethylated C's in CHH context:	22700515
+Total unmethylated C's in Unknown context:	10286
+
+C methylated in CpG context:	43.8%
+C methylated in CHG context:	1.7%
+C methylated in CHH context:	1.7%
+C methylated in Unknown context (CN or CHN):	6.7%
+
+
+Bismark completed in 0d 0h 57m 59s
+
+====================
+Bismark run complete
+====================
+
+Processed 2000000 sequences so far
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch2___Lane10_ACTTGA.fastq.gz to Batch2___Lane10_ACTTGA.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch2___Lane10_ACTTGA.fastq.gz (1412250 sequences in total)
+
+Input file is Batch2___Lane10_ACTTGA.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch2___Lane10_ACTTGA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:6350:1053_1:N:0:TAATGCGC+NCCTCTAT	16	chr11_CT_converted	77343456	42	134M	*	0	0	AATAAATAATANGTTATTTAGGAGGATGAGNAGAATAAGGAAAGATTTGGGATGTAANATGAGTTAAGGATTTAGATGTTTGNTTTAGGTAGATGGGTTGGTAGGTTTTTTTTAGGTAAAATAAATAGTATGAG	EEEEEEAEAA<#6EEEEEEEAEEE<EAAEA#EAEEEEEA<EEEEEEEEEAEE/EEEA#EEEEEEEEEEEEEEEEEEEEE<E<#EEEEEEEEEEEEEEA<AEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEEAEE	AS:i:-4	XN:i:0	XM:i:4	XO:i:0	XG:i:0	NM:i:4	MD:Z:11A18T26A24A51	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch2___Lane10_ACTTGA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:6350:1053_1:N:0:TAATGCGC+NCCTCTAT	4	*	0	0	*	*	0	0	CTCATACTATTTATTTTACCTAAAAAAAACCTACCAACCCATCTACCTAAANCAAACATCTAAATCCTTAACTCATNTTACATCCCAAATCTTTCCTTATTCTNCTCATCCTCCTAAATAACNTATTATTTATT	EEAEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEA<AEEEEEEEEEEEEEE#<E<EEEEEEEEEEEEEEEEEEEEE#AEEE/EEAEEEEEEEEE<AEEEEEAE#AEAAE<EEEAEEEEEEE6#<AAEAEEEEEE	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch2___Lane10_ACTTGA.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_ACTTGA.fastq.gz
+Read filtering is successful for cell  Batch1___Lane01_GCCAAT 
+Using  picard  to remove duplicates...[Thu Aug 13 10:30:27 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_GCCAAT.mapq_filtered.bam OUTPUT=Batch1___Lane01_GCCAAT.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:30:27 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:30:45	SortSam	Finished reading inputs, merging and writing to output now.
+2313909 reads; of these:
+  2313909 (100.00%) were unpaired; of these:
+    1633122 (70.58%) aligned 0 times
+    586045 (25.33%) aligned exactly 1 time
+    94742 (4.09%) aligned >1 times
+29.42% overall alignment rate
+2313909 reads; of these:
+  2313909 (100.00%) were unpaired; of these:
+    1629108 (70.41%) aligned 0 times
+    589475 (25.48%) aligned exactly 1 time
+    95326 (4.12%) aligned >1 times
+29.59% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_ACTTGA.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2313909
+Number of alignments with a unique best hit from the different alignments:	1180728
+Mapping efficiency:	51.0%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	32806230
+
+Total methylated C's in CpG context:	1101306
+Total methylated C's in CHG context:	405355
+Total methylated C's in CHH context:	1349208
+Total methylated C's in Unknown context:	822
+
+Total unmethylated C's in CpG context:	1187221
+Total unmethylated C's in CHG context:	6794091
+Total unmethylated C's in CHH context:	21969049
+Total unmethylated C's in Unknown context:	10079
+
+C methylated in CpG context:	48.1%
+C methylated in CHG context:	5.6%
+C methylated in CHH context:	5.8%
+C methylated in Unknown context (CN or CHN):	7.5%
+
+
+Bismark completed in 0d 0h 59m 21s
+
+====================
+Bismark run complete
+====================
+
+[Thu Aug 13 10:31:17 EDT 2020] picard.sam.SortSam done. Elapsed time: 0.82 minutes.
+Runtime.totalMemory()=3670540288
+Sorted alignments for cell  Batch1___Lane01_GCCAAT 
+[Thu Aug 13 10:31:17 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch1___Lane01_GCCAAT.sorted.bam] OUTPUT=Batch1___Lane01_GCCAAT.rmdup.bam METRICS_FILE=Batch1___Lane01_GCCAAT.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:31:17 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:31:17	MarkDuplicates	Start of doWork freeMemory: 2045986256; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-13 10:31:17	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-13 10:31:17	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-13 10:31:18	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:6:HYK7LBGX7:3:11401:6203:17384_1:N:0:ATTACTCG+AGGCTATA. Cause: String 'ATTACTCG+AGGCTATA' did not start with a parsable number.
+INFO	2020-08-13 10:31:32	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:13s.  Time for last 1,000,000:   13s.  Last read position: chrX:11,630,998
+INFO	2020-08-13 10:31:32	MarkDuplicates	Tracking 0 as yet unmatched pairs. 0 records in RAM.
+INFO	2020-08-13 10:31:32	MarkDuplicates	Read 1044553 records. 0 pairs never matched.
+INFO	2020-08-13 10:31:34	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2683101248; totalMemory: 3666870272; maxMemory: 28631367680
+INFO	2020-08-13 10:31:34	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2020-08-13 10:31:43	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-13 10:31:43	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-13 10:31:43	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-13 10:31:45	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3648513664; totalMemory: 10833887232; maxMemory: 28631367680
+INFO	2020-08-13 10:31:45	MarkDuplicates	Marking 221906 records as duplicates.
+INFO	2020-08-13 10:31:45	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-13 10:31:45	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+Read filtering is successful for cell  Batch1___Lane01_ACTTGA 
+Using  picard  to remove duplicates...[Thu Aug 13 10:31:50 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_ACTTGA.mapq_filtered.bam OUTPUT=Batch1___Lane01_ACTTGA.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:31:50 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:32:07	SortSam	Finished reading inputs, merging and writing to output now.
+INFO	2020-08-13 10:32:21	MarkDuplicates	Before output close freeMemory: 11085195480; totalMemory: 11118575616; maxMemory: 28631367680
+INFO	2020-08-13 10:32:21	MarkDuplicates	After output close freeMemory: 11009697056; totalMemory: 11043078144; maxMemory: 28631367680
+[Thu Aug 13 10:32:21 EDT 2020] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 1.07 minutes.
+Runtime.totalMemory()=11043078144
+Removed duplicate reads for cell  Batch1___Lane01_GCCAAT 
+Filtering nonconversion reads  : Batch1___Lane01_GCCAAT 
+Processing single-end Bismark output file(s) (SAM format):
+Batch1___Lane01_GCCAAT.rmdup.bam
+
+Checking file >>Batch1___Lane01_GCCAAT.rmdup.bam<< for signs of file truncation...
+
+
+Trying to determine the type of mapping from the SAM header line
+Treating file as single-end data (extracted from @PG line)
+Treating file as single-end data (extracted from @PG line)
+
+Using a threshold of >> 3 << methylation calls in non-CG context before a read gets removed
+
+[Thu Aug 13 10:32:41 EDT 2020] picard.sam.SortSam done. Elapsed time: 0.86 minutes.
+Runtime.totalMemory()=3670540288
+Sorted alignments for cell  Batch1___Lane01_ACTTGA 
+[Thu Aug 13 10:32:42 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch1___Lane01_ACTTGA.sorted.bam] OUTPUT=Batch1___Lane01_ACTTGA.rmdup.bam METRICS_FILE=Batch1___Lane01_ACTTGA.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:32:42 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:32:42	MarkDuplicates	Start of doWork freeMemory: 2045986152; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-13 10:32:42	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-13 10:32:42	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-13 10:32:43	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:36:HHG52BGXB:1:13112:3820:15850_1:N:0:ATTACTCG+AGGCTATA. Cause: String 'ATTACTCG+AGGCTATA' did not start with a parsable number.
+INFO	2020-08-13 10:32:55	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:12s.  Time for last 1,000,000:   12s.  Last read position: chrLambda:46,757
+INFO	2020-08-13 10:32:55	MarkDuplicates	Tracking 0 as yet unmatched pairs. 0 records in RAM.
+INFO	2020-08-13 10:32:56	MarkDuplicates	Read 1053815 records. 0 pairs never matched.
+INFO	2020-08-13 10:32:58	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2681364648; totalMemory: 3665821696; maxMemory: 28631367680
+INFO	2020-08-13 10:32:58	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2020-08-13 10:33:02	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-13 10:33:02	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-13 10:33:02	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-13 10:33:04	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3647968216; totalMemory: 10833362944; maxMemory: 28631367680
+INFO	2020-08-13 10:33:04	MarkDuplicates	Marking 213295 records as duplicates.
+INFO	2020-08-13 10:33:04	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-13 10:33:04	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2020-08-13 10:33:39	MarkDuplicates	Before output close freeMemory: 11087194488; totalMemory: 11120672768; maxMemory: 28631367680
+INFO	2020-08-13 10:33:39	MarkDuplicates	After output close freeMemory: 11011696064; totalMemory: 11045175296; maxMemory: 28631367680
+[Thu Aug 13 10:33:39 EDT 2020] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.96 minutes.
+Runtime.totalMemory()=11045175296
+Removed duplicate reads for cell  Batch1___Lane01_ACTTGA 
+Filtering nonconversion reads  : Batch1___Lane01_ACTTGA 
+Processing single-end Bismark output file(s) (SAM format):
+Batch1___Lane01_ACTTGA.rmdup.bam
+
+Checking file >>Batch1___Lane01_ACTTGA.rmdup.bam<< for signs of file truncation...
+
+
+Trying to determine the type of mapping from the SAM header line
+Treating file as single-end data (extracted from @PG line)
+Treating file as single-end data (extracted from @PG line)
+
+Using a threshold of >> 3 << methylation calls in non-CG context before a read gets removed
+
+NON-CONVERSION SUMMARY
+======================
+Analysed sequences (single-end) in file >> Batch1___Lane01_GCCAAT.rmdup.bam << in total:	822647
+Sequences removed because of apparent non-bisulfite conversion (at least 3 consecutive non-CG calls per read):	9566 (1.2%)
+
+Please continue with deduplication or methylation extraction now (depending on your application)
+
+filter_non_conversion completed in 0d 0h 1m 28s
+
+Non-conversion filtering is successful for cell  Batch1___Lane01_GCCAAT 
+[main_samview] region "chrlambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "Lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "L" specifies an unknown reference name. Continue anyway.
+Lambda control split is successful for cell  Batch1___Lane01_GCCAAT 
+Type: EXEC 
+** fastq_file:  Batch2___Lane10_ATCACG.fastq.gz 
+[1] "align_cell"
+ -- fastq_file:  Batch2___Lane10_ATCACG.fastq.gz 
+Aligning  Batch2___Lane10_ATCACG.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch2___Lane10_ATCACG --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_ATCACG.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch2___Lane10_ATCACG.fastq.gz.log"
+Path to Bowtie 2 specified as: bowtie2
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_ATCACG.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+2355372 reads; of these:
+  2355372 (100.00%) were unpaired; of these:
+    1785305 (75.80%) aligned 0 times
+    480621 (20.41%) aligned exactly 1 time
+    89446 (3.80%) aligned >1 times
+24.20% overall alignment rate
+2355372 reads; of these:
+  2355372 (100.00%) were unpaired; of these:
+    1787709 (75.90%) aligned 0 times
+    476654 (20.24%) aligned exactly 1 time
+    91009 (3.86%) aligned >1 times
+24.10% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_CGATGT.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2355372
+Number of alignments with a unique best hit from the different alignments:	962347
+Mapping efficiency:	40.9%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	26904247
+
+Total methylated C's in CpG context:	868651
+Total methylated C's in CHG context:	107191
+Total methylated C's in CHH context:	346664
+Total methylated C's in Unknown context:	669
+
+Total unmethylated C's in CpG context:	1167362
+Total unmethylated C's in CHG context:	5860576
+Total unmethylated C's in CHH context:	18553803
+Total unmethylated C's in Unknown context:	8982
+
+C methylated in CpG context:	42.7%
+C methylated in CHG context:	1.8%
+C methylated in CHH context:	1.8%
+C methylated in Unknown context (CN or CHN):	6.9%
+
+
+Bismark completed in 0d 1h 3m 14s
+
+====================
+Bismark run complete
+====================
+
+NON-CONVERSION SUMMARY
+======================
+Analysed sequences (single-end) in file >> Batch1___Lane01_ACTTGA.rmdup.bam << in total:	840520
+Sequences removed because of apparent non-bisulfite conversion (at least 3 consecutive non-CG calls per read):	49672 (5.9%)
+
+Please continue with deduplication or methylation extraction now (depending on your application)
+
+filter_non_conversion completed in 0d 0h 1m 26s
+
+Non-conversion filtering is successful for cell  Batch1___Lane01_ACTTGA 
+[main_samview] region "chrlambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "Lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "L" specifies an unknown reference name. Continue anyway.
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch2___Lane10_ATCACG.fastq.gz to Batch2___Lane10_ATCACG.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch2___Lane10_ATCACG.fastq.gz (1285604 sequences in total)
+
+Input file is Batch2___Lane10_ATCACG.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch2___Lane10_ATCACG.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:7294:1059_1:N:0:TAATGCGC+GCCTCTAT	4	*	0	0	*	*	0	0	TATATTAACATAATTAAAACTAAAACTCACCTCTCTAACTCCCAACCCAAAATTATCTCAATTACATCAATACATCATTTCCCTTTTACTAAACACTACACCCTAAACATAATCAATAATCCATATATTTACT	EEEEEEEEEEEEEEEEEE6EEEE//EEA/EEEAEAEAAEEEAEE/EEEEE6EEEEEEE<E<AEEE<EEE/EAAEEEAE<EEEEEEEEAEEA/<E/EE/E/EEEE//EEEEEEEE</AE/AAAEEEEEEEE6<E	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch2___Lane10_ATCACG.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:7294:1059_1:N:0:TAATGCGC+GCCTCTAT	0	chr12_GA_converted	81986960	40	133M	*	0	0	TATATTAACATAATTAAAACTAAAACTCACCTCTCTAACTCCCAACCCAAAATTATCTCAATTACATCAATACATCATTTCCCTTTTACTAAACACTACACCCTAAACATAATCAATAATCCATATATTTACT	EEEEEEEEEEEEEEEEEE6EEEE//EEA/EEEAEAEAAEEEAEE/EEEEE6EEEEEEE<E<AEEE<EEE/EAAEEEAE<EEEEEEEEAEEA/<E/EE/E/EEEE//EEEEEEEE</AE/AAAEEEEEEEE6<E	AS:i:-6	XN:i:0	XM:i:1	XO:i:0	XG:i:0	NM:i:1	MD:Z:59C73	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch2___Lane10_ATCACG.bam <<<
+
+Read filtering is successful for cell  Batch1___Lane01_CGATGT 
+Using  picard  to remove duplicates...[Thu Aug 13 10:35:29 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_CGATGT.mapq_filtered.bam OUTPUT=Batch1___Lane01_CGATGT.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:35:29 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_ATCACG.fastq.gz
+INFO	2020-08-13 10:35:40	SortSam	Finished reading inputs, merging and writing to output now.
+Lambda control split is successful for cell  Batch1___Lane01_ACTTGA 
+Type: EXEC 
+** fastq_file:  Batch2___Lane10_CAGATC.fastq.gz 
+[1] "align_cell"
+ -- fastq_file:  Batch2___Lane10_CAGATC.fastq.gz 
+Aligning  Batch2___Lane10_CAGATC.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch2___Lane10_CAGATC --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_CAGATC.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch2___Lane10_CAGATC.fastq.gz.log"
+Path to Bowtie 2 specified as: bowtie2
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_CAGATC.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+[Thu Aug 13 10:36:08 EDT 2020] picard.sam.SortSam done. Elapsed time: 0.66 minutes.
+Runtime.totalMemory()=2595749888
+Sorted alignments for cell  Batch1___Lane01_CGATGT 
+[Thu Aug 13 10:36:09 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch1___Lane01_CGATGT.sorted.bam] OUTPUT=Batch1___Lane01_CGATGT.rmdup.bam METRICS_FILE=Batch1___Lane01_CGATGT.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:36:09 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:36:09	MarkDuplicates	Start of doWork freeMemory: 2045986344; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-13 10:36:09	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-13 10:36:09	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-13 10:36:10	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:37:HHG5FBGXB:3:21505:10047:1903_1:N:0:ATTACTCG+AGGCTAAA. Cause: String 'ATTACTCG+AGGCTAAA' did not start with a parsable number.
+INFO	2020-08-13 10:36:21	MarkDuplicates	Read 848570 records. 0 pairs never matched.
+INFO	2020-08-13 10:36:23	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2428660168; totalMemory: 3394240512; maxMemory: 28631367680
+INFO	2020-08-13 10:36:23	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2020-08-13 10:36:34	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-13 10:36:34	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-13 10:36:34	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-13 10:36:35	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3368427472; totalMemory: 10549723136; maxMemory: 28631367680
+INFO	2020-08-13 10:36:35	MarkDuplicates	Marking 174789 records as duplicates.
+INFO	2020-08-13 10:36:35	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-13 10:36:35	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch2___Lane10_CAGATC.fastq.gz to Batch2___Lane10_CAGATC.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch2___Lane10_CAGATC.fastq.gz (1616004 sequences in total)
+
+Input file is Batch2___Lane10_CAGATC.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch2___Lane10_CAGATC.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:5057:1064_1:N:0:TAATGCGC+GCCTCTAT	4	*	0	0	*	*	0	0	CATCTTTTACCCATACAACTTTATATACTTAAAAATTACAAAAAATACATTAACATTTAAAACTATATCCTATTAACCAAACACAATCACTCACACCTATAATCCCAACACTTAAAAAAACTAAAACA	EAEE66EEEE<//EA//<E/666EEE6E/E6E/EEAEAE/E6E///EE///A/A///E//</EE//AA//<AEAEAEEE6AE///E///E/A/EEEE/AE/E<A/E//E/E///A/EE////E///AE	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch2___Lane10_CAGATC.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:5057:1064_1:N:0:TAATGCGC+GCCTCTAT	4	*	0	0	*	*	0	0	CATCTTTTACCCATACAACTTTATATACTTAAAAATTACAAAAAATACATTAACATTTAAAACTATATCCTATTAACCAAACACAATCACTCACACCTATAATCCCAACACTTAAAAAAACTAAAACA	EAEE66EEEE<//EA//<E/666EEE6E/E6E/EEAEAE/E6E///EE///A/A///E//</EE//AA//<AEAEAEEE6AE///E///E/A/EEEE/AE/E<A/E//E/E///A/EE////E///AE	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch2___Lane10_CAGATC.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_CAGATC.fastq.gz
+INFO	2020-08-13 10:37:05	MarkDuplicates	Before output close freeMemory: 10837040000; totalMemory: 10866917376; maxMemory: 28631367680
+INFO	2020-08-13 10:37:05	MarkDuplicates	After output close freeMemory: 10827601864; totalMemory: 10857480192; maxMemory: 28631367680
+[Thu Aug 13 10:37:05 EDT 2020] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 0.94 minutes.
+Runtime.totalMemory()=10857480192
+Removed duplicate reads for cell  Batch1___Lane01_CGATGT 
+Filtering nonconversion reads  : Batch1___Lane01_CGATGT 
+Processing single-end Bismark output file(s) (SAM format):
+Batch1___Lane01_CGATGT.rmdup.bam
+
+Checking file >>Batch1___Lane01_CGATGT.rmdup.bam<< for signs of file truncation...
+
+
+Trying to determine the type of mapping from the SAM header line
+Treating file as single-end data (extracted from @PG line)
+Treating file as single-end data (extracted from @PG line)
+
+Using a threshold of >> 3 << methylation calls in non-CG context before a read gets removed
+
+NON-CONVERSION SUMMARY
+======================
+Analysed sequences (single-end) in file >> Batch1___Lane01_CGATGT.rmdup.bam << in total:	673781
+Sequences removed because of apparent non-bisulfite conversion (at least 3 consecutive non-CG calls per read):	7527 (1.1%)
+
+Please continue with deduplication or methylation extraction now (depending on your application)
+
+filter_non_conversion completed in 0d 0h 1m 14s
+
+Non-conversion filtering is successful for cell  Batch1___Lane01_CGATGT 
+[main_samview] region "chrlambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "Lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "L" specifies an unknown reference name. Continue anyway.
+Lambda control split is successful for cell  Batch1___Lane01_CGATGT 
+Type: EXEC 
+** fastq_file:  Batch2___Lane10_CGATGT.fastq.gz 
+[1] "align_cell"
+ -- fastq_file:  Batch2___Lane10_CGATGT.fastq.gz 
+Aligning  Batch2___Lane10_CGATGT.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch2___Lane10_CGATGT --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_CGATGT.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch2___Lane10_CGATGT.fastq.gz.log"
+Path to Bowtie 2 specified as: bowtie2
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_CGATGT.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+2873225 reads; of these:
+  2873225 (100.00%) were unpaired; of these:
+    2021739 (70.36%) aligned 0 times
+    732774 (25.50%) aligned exactly 1 time
+    118712 (4.13%) aligned >1 times
+29.64% overall alignment rate
+2873225 reads; of these:
+  2873225 (100.00%) were unpaired; of these:
+    2016695 (70.19%) aligned 0 times
+    737494 (25.67%) aligned exactly 1 time
+    119036 (4.14%) aligned >1 times
+29.81% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_ATCACG.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2873225
+Number of alignments with a unique best hit from the different alignments:	1476178
+Mapping efficiency:	51.4%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	40952308
+
+Total methylated C's in CpG context:	1367262
+Total methylated C's in CHG context:	548623
+Total methylated C's in CHH context:	1832214
+Total methylated C's in Unknown context:	1195
+
+Total unmethylated C's in CpG context:	1532205
+Total unmethylated C's in CHG context:	8386729
+Total unmethylated C's in CHH context:	27285275
+Total unmethylated C's in Unknown context:	12393
+
+C methylated in CpG context:	47.2%
+C methylated in CHG context:	6.1%
+C methylated in CHH context:	6.3%
+C methylated in Unknown context (CN or CHN):	8.8%
+
+
+Bismark completed in 0d 1h 8m 0s
+
+====================
+Bismark run complete
+====================
+
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch2___Lane10_CGATGT.fastq.gz to Batch2___Lane10_CGATGT.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch2___Lane10_CGATGT.fastq.gz (1053956 sequences in total)
+
+Input file is Batch2___Lane10_CGATGT.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch2___Lane10_CGATGT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:11642:1095_1:N:0:TAATGCGC+GCCTCTAT	4	*	0	0	*	*	0	0	CACCACTAACCATAATATACTCCACACCAATCTTATAAATCTAATTATCAAAATAAATAAAATTTCCAAAACACACATTCACCACACCAACACTCAATCAAATTTCCTACCAATTAATACAATCAAAATCAACC	EAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEAEEEEE<<E<6AEEEAEEE<EAEE/EEEE<<E/AAEE<EE/EE/AEEEAEAEEA/AEE	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch2___Lane10_CGATGT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:11642:1095_1:N:0:TAATGCGC+GCCTCTAT	4	*	0	0	*	*	0	0	CACCACTAACCATAATATACTCCACACCAATCTTATAAATCTAATTATCAAAATAAATAAAATTTCCAAAACACACATTCACCACACCAACACTCAATCAAATTTCCTACCAATTAATACAATCAAAATCAACC	EAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEAEEEEE<<E<6AEEEAEEE<EAEE/EEEE<<E/AAEE<EE/EE/AEEEAEAEEA/AEE	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch2___Lane10_CGATGT.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_CGATGT.fastq.gz
+Read filtering is successful for cell  Batch1___Lane01_ATCACG 
+Using  picard  to remove duplicates...[Thu Aug 13 10:40:43 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_ATCACG.mapq_filtered.bam OUTPUT=Batch1___Lane01_ATCACG.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:40:43 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+2689797 reads; of these:
+  2689797 (100.00%) were unpaired; of these:
+    1931560 (71.81%) aligned 0 times
+    653160 (24.28%) aligned exactly 1 time
+    105077 (3.91%) aligned >1 times
+28.19% overall alignment rate
+2689797 reads; of these:
+  2689797 (100.00%) were unpaired; of these:
+    1925346 (71.58%) aligned 0 times
+    658863 (24.49%) aligned exactly 1 time
+    105588 (3.93%) aligned >1 times
+28.42% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_TGACCA.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2689797
+Number of alignments with a unique best hit from the different alignments:	1316907
+Mapping efficiency:	49.0%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	36834687
+
+Total methylated C's in CpG context:	1235040
+Total methylated C's in CHG context:	211169
+Total methylated C's in CHH context:	695427
+Total methylated C's in Unknown context:	922
+
+Total unmethylated C's in CpG context:	1464682
+Total unmethylated C's in CHG context:	7872961
+Total unmethylated C's in CHH context:	25355408
+Total unmethylated C's in Unknown context:	11976
+
+C methylated in CpG context:	45.7%
+C methylated in CHG context:	2.6%
+C methylated in CHH context:	2.7%
+C methylated in Unknown context (CN or CHN):	7.1%
+
+
+Bismark completed in 0d 1h 9m 23s
+
+====================
+Bismark run complete
+====================
+
+INFO	2020-08-13 10:41:01	SortSam	Finished reading inputs, merging and writing to output now.
+[Thu Aug 13 10:41:46 EDT 2020] picard.sam.SortSam done. Elapsed time: 1.04 minutes.
+Runtime.totalMemory()=3478650880
+Sorted alignments for cell  Batch1___Lane01_ATCACG 
+[Thu Aug 13 10:41:46 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch1___Lane01_ATCACG.sorted.bam] OUTPUT=Batch1___Lane01_ATCACG.rmdup.bam METRICS_FILE=Batch1___Lane01_ATCACG.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:41:46 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:41:46	MarkDuplicates	Start of doWork freeMemory: 2045986008; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-13 10:41:46	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-13 10:41:46	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-13 10:41:47	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:36:HHG52BGXB:1:11111:9566:16438_1:N:0:ATTACTCG+AGGCTATA. Cause: String 'ATTACTCG+AGGCTATA' did not start with a parsable number.
+Read filtering is successful for cell  Batch1___Lane01_TGACCA 
+Using  picard  to remove duplicates...[Thu Aug 13 10:41:58 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_TGACCA.mapq_filtered.bam OUTPUT=Batch1___Lane01_TGACCA.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:41:58 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:42:00	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:13s.  Time for last 1,000,000:   13s.  Last read position: chr7:121,079,607
+INFO	2020-08-13 10:42:00	MarkDuplicates	Tracking 0 as yet unmatched pairs. 0 records in RAM.
+INFO	2020-08-13 10:42:03	MarkDuplicates	Read 1321485 records. 0 pairs never matched.
+INFO	2020-08-13 10:42:06	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2786959712; totalMemory: 3793747968; maxMemory: 28631367680
+INFO	2020-08-13 10:42:06	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2020-08-13 10:42:14	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-13 10:42:14	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-13 10:42:14	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-13 10:42:15	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3811340560; totalMemory: 11000610816; maxMemory: 28631367680
+INFO	2020-08-13 10:42:15	MarkDuplicates	Marking 279798 records as duplicates.
+INFO	2020-08-13 10:42:15	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-13 10:42:15	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2020-08-13 10:42:17	SortSam	Finished reading inputs, merging and writing to output now.
+[Thu Aug 13 10:42:55 EDT 2020] picard.sam.SortSam done. Elapsed time: 0.96 minutes.
+Runtime.totalMemory()=3478126592
+Sorted alignments for cell  Batch1___Lane01_TGACCA 
+[Thu Aug 13 10:42:56 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch1___Lane01_TGACCA.sorted.bam] OUTPUT=Batch1___Lane01_TGACCA.rmdup.bam METRICS_FILE=Batch1___Lane01_TGACCA.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:42:56 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:42:56	MarkDuplicates	Start of doWork freeMemory: 2045986152; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-13 10:42:56	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-13 10:42:56	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-13 10:42:56	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:37:HHG5FBGXB:3:13604:23255:17747_1:N:0:ATTACTCG+AGGCTATA. Cause: String 'ATTACTCG+AGGCTATA' did not start with a parsable number.
+INFO	2020-08-13 10:43:00	MarkDuplicates	Before output close freeMemory: 11178689344; totalMemory: 11214520320; maxMemory: 28631367680
+INFO	2020-08-13 10:43:01	MarkDuplicates	After output close freeMemory: 11082219400; totalMemory: 11118051328; maxMemory: 28631367680
+[Thu Aug 13 10:43:01 EDT 2020] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 1.24 minutes.
+Runtime.totalMemory()=11118051328
+Removed duplicate reads for cell  Batch1___Lane01_ATCACG 
+Filtering nonconversion reads  : Batch1___Lane01_ATCACG 
+Processing single-end Bismark output file(s) (SAM format):
+Batch1___Lane01_ATCACG.rmdup.bam
+
+Checking file >>Batch1___Lane01_ATCACG.rmdup.bam<< for signs of file truncation...
+
+
+Trying to determine the type of mapping from the SAM header line
+Treating file as single-end data (extracted from @PG line)
+Treating file as single-end data (extracted from @PG line)
+
+Using a threshold of >> 3 << methylation calls in non-CG context before a read gets removed
+
+INFO	2020-08-13 10:43:09	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:12s.  Time for last 1,000,000:   12s.  Last read position: chrLambda:3,672
+INFO	2020-08-13 10:43:09	MarkDuplicates	Tracking 0 as yet unmatched pairs. 0 records in RAM.
+INFO	2020-08-13 10:43:11	MarkDuplicates	Read 1176197 records. 0 pairs never matched.
+INFO	2020-08-13 10:43:12	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2770579360; totalMemory: 3765960704; maxMemory: 28631367680
+INFO	2020-08-13 10:43:12	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2020-08-13 10:43:17	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-13 10:43:17	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-13 10:43:17	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-13 10:43:19	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3748615872; totalMemory: 10936123392; maxMemory: 28631367680
+INFO	2020-08-13 10:43:19	MarkDuplicates	Marking 238268 records as duplicates.
+INFO	2020-08-13 10:43:19	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-13 10:43:19	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+2875940 reads; of these:
+  2875940 (100.00%) were unpaired; of these:
+    1949886 (67.80%) aligned 0 times
+    800837 (27.85%) aligned exactly 1 time
+    125217 (4.35%) aligned >1 times
+32.20% overall alignment rate
+2875940 reads; of these:
+  2875940 (100.00%) were unpaired; of these:
+    1941196 (67.50%) aligned 0 times
+    809481 (28.15%) aligned exactly 1 time
+    125263 (4.36%) aligned >1 times
+32.50% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_TAGCTT.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2875940
+Number of alignments with a unique best hit from the different alignments:	1617050
+Mapping efficiency:	56.2%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	45204719
+
+Total methylated C's in CpG context:	1511944
+Total methylated C's in CHG context:	304276
+Total methylated C's in CHH context:	973753
+Total methylated C's in Unknown context:	902
+
+Total unmethylated C's in CpG context:	1747157
+Total unmethylated C's in CHG context:	9722019
+Total unmethylated C's in CHH context:	30945570
+Total unmethylated C's in Unknown context:	13654
+
+C methylated in CpG context:	46.4%
+C methylated in CHG context:	3.0%
+C methylated in CHH context:	3.1%
+C methylated in Unknown context (CN or CHN):	6.2%
+
+
+Bismark completed in 0d 1h 12m 0s
+
+====================
+Bismark run complete
+====================
+
+INFO	2020-08-13 10:43:57	MarkDuplicates	Before output close freeMemory: 11245711464; totalMemory: 11282677760; maxMemory: 28631367680
+INFO	2020-08-13 10:43:57	MarkDuplicates	After output close freeMemory: 11166018736; totalMemory: 11202985984; maxMemory: 28631367680
+[Thu Aug 13 10:43:57 EDT 2020] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 1.03 minutes.
+Runtime.totalMemory()=11202985984
+Removed duplicate reads for cell  Batch1___Lane01_TGACCA 
+Filtering nonconversion reads  : Batch1___Lane01_TGACCA 
+Processing single-end Bismark output file(s) (SAM format):
+Batch1___Lane01_TGACCA.rmdup.bam
+
+Checking file >>Batch1___Lane01_TGACCA.rmdup.bam<< for signs of file truncation...
+
+
+Trying to determine the type of mapping from the SAM header line
+Treating file as single-end data (extracted from @PG line)
+Treating file as single-end data (extracted from @PG line)
+
+Using a threshold of >> 3 << methylation calls in non-CG context before a read gets removed
+
+NON-CONVERSION SUMMARY
+======================
+Analysed sequences (single-end) in file >> Batch1___Lane01_ATCACG.rmdup.bam << in total:	1041687
+Sequences removed because of apparent non-bisulfite conversion (at least 3 consecutive non-CG calls per read):	68585 (6.6%)
+
+Please continue with deduplication or methylation extraction now (depending on your application)
+
+filter_non_conversion completed in 0d 0h 1m 45s
+
+Non-conversion filtering is successful for cell  Batch1___Lane01_ATCACG 
+Read filtering is successful for cell  Batch1___Lane01_TAGCTT 
+Using  picard  to remove duplicates...[Thu Aug 13 10:44:49 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_TAGCTT.mapq_filtered.bam OUTPUT=Batch1___Lane01_TAGCTT.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:44:49 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+[main_samview] region "chrlambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "Lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "L" specifies an unknown reference name. Continue anyway.
+INFO	2020-08-13 10:45:07	SortSam	Finished reading inputs, merging and writing to output now.
+NON-CONVERSION SUMMARY
+======================
+Analysed sequences (single-end) in file >> Batch1___Lane01_TGACCA.rmdup.bam << in total:	937929
+Sequences removed because of apparent non-bisulfite conversion (at least 3 consecutive non-CG calls per read):	21273 (2.3%)
+
+Please continue with deduplication or methylation extraction now (depending on your application)
+
+filter_non_conversion completed in 0d 0h 1m 36s
+
+Non-conversion filtering is successful for cell  Batch1___Lane01_TGACCA 
+[main_samview] region "chrlambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "Lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "L" specifies an unknown reference name. Continue anyway.
+Lambda control split is successful for cell  Batch1___Lane01_ATCACG 
+Type: EXEC 
+** fastq_file:  Batch2___Lane10_CTTGTA.fastq.gz 
+[1] "align_cell"
+ -- fastq_file:  Batch2___Lane10_CTTGTA.fastq.gz 
+Aligning  Batch2___Lane10_CTTGTA.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch2___Lane10_CTTGTA --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_CTTGTA.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch2___Lane10_CTTGTA.fastq.gz.log"
+Path to Bowtie 2 specified as: bowtie2
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_CTTGTA.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+[Thu Aug 13 10:45:55 EDT 2020] picard.sam.SortSam done. Elapsed time: 1.09 minutes.
+Runtime.totalMemory()=3670540288
+Sorted alignments for cell  Batch1___Lane01_TAGCTT 
+[Thu Aug 13 10:45:55 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch1___Lane01_TAGCTT.sorted.bam] OUTPUT=Batch1___Lane01_TAGCTT.rmdup.bam METRICS_FILE=Batch1___Lane01_TAGCTT.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:45:55 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:45:55	MarkDuplicates	Start of doWork freeMemory: 2045985768; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-13 10:45:55	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-13 10:45:55	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-13 10:45:56	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:37:HHG5FBGXB:2:12303:20537:18256_1:N:0:ATTACTCG+AGGCTATA. Cause: String 'ATTACTCG+AGGCTATA' did not start with a parsable number.
+INFO	2020-08-13 10:46:08	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:11s.  Time for last 1,000,000:   11s.  Last read position: chr6:72,819,322
+INFO	2020-08-13 10:46:08	MarkDuplicates	Tracking 0 as yet unmatched pairs. 0 records in RAM.
+INFO	2020-08-13 10:46:11	MarkDuplicates	Read 1453533 records. 0 pairs never matched.
+INFO	2020-08-13 10:46:13	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2669390040; totalMemory: 3682598912; maxMemory: 28631367680
+INFO	2020-08-13 10:46:13	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2020-08-13 10:46:17	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-13 10:46:17	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-13 10:46:17	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-13 10:46:19	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3731143648; totalMemory: 10917773312; maxMemory: 28631367680
+INFO	2020-08-13 10:46:19	MarkDuplicates	Marking 322069 records as duplicates.
+INFO	2020-08-13 10:46:19	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-13 10:46:19	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch2___Lane10_CTTGTA.fastq.gz to Batch2___Lane10_CTTGTA.fastq.gz_G_to_A.fastq
+Lambda control split is successful for cell  Batch1___Lane01_TGACCA 
+Type: EXEC 
+** fastq_file:  Batch2___Lane10_GCCAAT.fastq.gz 
+[1] "align_cell"
+ -- fastq_file:  Batch2___Lane10_GCCAAT.fastq.gz 
+Aligning  Batch2___Lane10_GCCAAT.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch2___Lane10_GCCAAT --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_GCCAAT.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch2___Lane10_GCCAAT.fastq.gz.log"
+Path to Bowtie 2 specified as: bowtie2
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_GCCAAT.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+
+Created G -> A converted version of the FastQ file Batch2___Lane10_CTTGTA.fastq.gz (1578842 sequences in total)
+
+Input file is Batch2___Lane10_CTTGTA.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch2___Lane10_CTTGTA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:20876:1062_1:N:0:TAATGCGC+GCCTCTAT	4	*	0	0	*	*	0	0	AAAAAACTTTAAATAAATAAAATATACCAAATATCAATAAATAATAATATTTTACTATCAAATTATTACTATCTTCTACATATATATTTCCTACATATTTCACATTATATTACTTTTCTTTTAACTTTATTTTC	EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEAEEEAEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEE/EEEEAEAEA<	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch2___Lane10_CTTGTA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:20876:1062_1:N:0:TAATGCGC+GCCTCTAT	4	*	0	0	*	*	0	0	AAAAAACTTTAAATAAATAAAATATACCAAATATCAATAAATAATAATATTTTACTATCAAATTATTACTATCTTCTACATATATATTTCCTACATATTTCACATTATATTACTTTTCTTTTAACTTTATTTTC	EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEAEEEAEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEE/EEEEAEAEA<	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch2___Lane10_CTTGTA.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_CTTGTA.fastq.gz
+INFO	2020-08-13 10:47:07	MarkDuplicates	Before output close freeMemory: 11208857608; totalMemory: 11244929024; maxMemory: 28631367680
+INFO	2020-08-13 10:47:08	MarkDuplicates	After output close freeMemory: 11118154832; totalMemory: 11154227200; maxMemory: 28631367680
+[Thu Aug 13 10:47:08 EDT 2020] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 1.21 minutes.
+Runtime.totalMemory()=11154227200
+Removed duplicate reads for cell  Batch1___Lane01_TAGCTT 
+Filtering nonconversion reads  : Batch1___Lane01_TAGCTT 
+Processing single-end Bismark output file(s) (SAM format):
+Batch1___Lane01_TAGCTT.rmdup.bam
+
+Checking file >>Batch1___Lane01_TAGCTT.rmdup.bam<< for signs of file truncation...
+
+
+Trying to determine the type of mapping from the SAM header line
+Treating file as single-end data (extracted from @PG line)
+Treating file as single-end data (extracted from @PG line)
+
+Using a threshold of >> 3 << methylation calls in non-CG context before a read gets removed
+
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch2___Lane10_GCCAAT.fastq.gz to Batch2___Lane10_GCCAAT.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch2___Lane10_GCCAAT.fastq.gz (1551535 sequences in total)
+
+Input file is Batch2___Lane10_GCCAAT.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch2___Lane10_GCCAAT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:2753:1055_1:N:0:TAATGCGC+NCCTCTAT	4	*	0	0	*	*	0	0	CTAAACACAAATCACAAAACTAAATATAAAACTTAAAACAATAAAATTTTATAACCTAACCATAATAAATTTCTTAAACCATAAAAAATACTAACCAAAAAAANCCAAATTATTAAATTTCCTCAAAAACAAAA	EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEE/EEEEAE6EEEEEEEEAEEEEEEAEA#EEE/EEE<<A<<EEEEA<EA<<6A<EEEAA	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch2___Lane10_GCCAAT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:2753:1055_1:N:0:TAATGCGC+NCCTCTAT	0	chr3_GA_converted	65014339	40	134M	*	0	0	CTAAACACAAATCACAAAACTAAATATAAAACTTAAAACAATAAAATTTTATAACCTAACCATAATAAATTTCTTAAACCATAAAAAATACTAACCAAAAAAANCCAAATTATTAAATTTCCTCAAAAACAAAA	EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEE/EEEEAE6EEEEEEEEAEEEEEEAEA#EEE/EEE<<A<<EEEEA<EA<<6A<EEEAA	AS:i:-7	XN:i:0	XM:i:2	XO:i:0	XG:i:0	NM:i:2	MD:Z:32C70A30	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch2___Lane10_GCCAAT.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_GCCAAT.fastq.gz
+2800938 reads; of these:
+  2800938 (100.00%) were unpaired; of these:
+    1968633 (70.28%) aligned 0 times
+    710649 (25.37%) aligned exactly 1 time
+    121656 (4.34%) aligned >1 times
+29.72% overall alignment rate
+2800938 reads; of these:
+  2800938 (100.00%) were unpaired; of these:
+    1969455 (70.31%) aligned 0 times
+    712730 (25.45%) aligned exactly 1 time
+    118753 (4.24%) aligned >1 times
+29.69% overall alignment rate
+
+Successfully deleted the temporary file Batch1___Lane01_CAGATC.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	2800938
+Number of alignments with a unique best hit from the different alignments:	1432464
+Mapping efficiency:	51.1%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	39247246
+
+Total methylated C's in CpG context:	1251316
+Total methylated C's in CHG context:	539853
+Total methylated C's in CHH context:	1720622
+Total methylated C's in Unknown context:	1137
+
+Total unmethylated C's in CpG context:	1661202
+Total unmethylated C's in CHG context:	8113860
+Total unmethylated C's in CHH context:	25960393
+Total unmethylated C's in Unknown context:	12477
+
+C methylated in CpG context:	43.0%
+C methylated in CHG context:	6.2%
+C methylated in CHH context:	6.2%
+C methylated in Unknown context (CN or CHN):	8.4%
+
+
+Bismark completed in 0d 1h 17m 22s
+
+====================
+Bismark run complete
+====================
+
+NON-CONVERSION SUMMARY
+======================
+Analysed sequences (single-end) in file >> Batch1___Lane01_TAGCTT.rmdup.bam << in total:	1131464
+Sequences removed because of apparent non-bisulfite conversion (at least 3 consecutive non-CG calls per read):	33043 (2.9%)
+
+Please continue with deduplication or methylation extraction now (depending on your application)
+
+filter_non_conversion completed in 0d 0h 2m 1s
+
+Non-conversion filtering is successful for cell  Batch1___Lane01_TAGCTT 
+[main_samview] region "chrlambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "Lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "L" specifies an unknown reference name. Continue anyway.
+Read filtering is successful for cell  Batch1___Lane01_CAGATC 
+Using  picard  to remove duplicates...[Thu Aug 13 10:50:02 EDT 2020] picard.sam.SortSam INPUT=Batch1___Lane01_CAGATC.mapq_filtered.bam OUTPUT=Batch1___Lane01_CAGATC.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:50:02 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+Lambda control split is successful for cell  Batch1___Lane01_TAGCTT 
+Type: EXEC 
+** fastq_file:  Batch2___Lane10_TAGCTT.fastq.gz 
+[1] "align_cell"
+ -- fastq_file:  Batch2___Lane10_TAGCTT.fastq.gz 
+Aligning  Batch2___Lane10_TAGCTT.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch2___Lane10_TAGCTT --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_TAGCTT.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch2___Lane10_TAGCTT.fastq.gz.log"
+Path to Bowtie 2 specified as: bowtie2
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_TAGCTT.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+INFO	2020-08-13 10:50:26	SortSam	Finished reading inputs, merging and writing to output now.
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch2___Lane10_TAGCTT.fastq.gz to Batch2___Lane10_TAGCTT.fastq.gz_G_to_A.fastq
+[Thu Aug 13 10:51:07 EDT 2020] picard.sam.SortSam done. Elapsed time: 1.08 minutes.
+Runtime.totalMemory()=3435659264
+Sorted alignments for cell  Batch1___Lane01_CAGATC 
+[Thu Aug 13 10:51:08 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch1___Lane01_CAGATC.sorted.bam] OUTPUT=Batch1___Lane01_CAGATC.rmdup.bam METRICS_FILE=Batch1___Lane01_CAGATC.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 10:51:08 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 10:51:08	MarkDuplicates	Start of doWork freeMemory: 2045986392; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-13 10:51:08	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-13 10:51:08	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-13 10:51:08	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:6:HYK7LBGX7:4:11502:26459:12017_1:N:0:ATTACTCG+AGGCTATA. Cause: String 'ATTACTCG+AGGCTATA' did not start with a parsable number.
+
+Created G -> A converted version of the FastQ file Batch2___Lane10_TAGCTT.fastq.gz (1609913 sequences in total)
+
+Input file is Batch2___Lane10_TAGCTT.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch2___Lane10_TAGCTT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:14529:1054_1:N:0:TAATGCGC+NCCTCTAT	16	chr20_CT_converted	26604041	0	17M1I89M1D27M	*	0	0	AGTTTTTATGGGAAGATGTTTTTTTTTTTTNTTATAGGTTTTAAAGTGTTTTAAATGTTTATTTTTAGGGAATGGAAAAAGAGTGTTTTTAATTTGTTTTATGAAAGTAATGTTTAATTTTGTGATTTGAATGT	</////EE/<//A////</A/AE/E<<///#/EEEEEAEE/EEEEEEEE/EEEEEEE/EEEEEEEEEEEAEAE//EEEE<EEEEE6EEE6EEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEE	AS:i:-23	XS:i:-23	XN:i:0	XM:i:2	XO:i:2	XG:i:2	NM:i:4	MD:Z:17A11A76^T27	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch2___Lane10_TAGCTT.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+INFO	2020-08-13 10:51:24	MarkDuplicates	Read     1,000,000 records.  Elapsed time: 00:00:15s.  Time for last 1,000,000:   15s.  Last read position: chr9:18,898,963
+INFO	2020-08-13 10:51:24	MarkDuplicates	Tracking 0 as yet unmatched pairs. 0 records in RAM.
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:14529:1054_1:N:0:TAATGCGC+NCCTCTAT	0	chr20_GA_converted	26546698	0	26M1D78M1I29M	*	0	0	ACATTCAAATCACAAAATTAAACATTACTTTCATAAAACAAATTAAAAACACTCTTTTTCCATTCCCTAAAAATAAACATTTAAAACACTTTAAAACCTATAANAAAAAAAAAAAACATCTTCCCATAAAAACT	EEEEEEEEEEEEEEEEEEEEEEEAEEEEEEEEEEEEEEEEEEEE6EEE6EEEEE<EEEE//EAEAEEEEEEEEEEE/EEEEEEE/EEEEEEEE/EEAEEEEE/#///<<E/EA/A/<////A//</EE/////<	AS:i:-17	XS:i:-23	XN:i:0	XM:i:1	XO:i:2	XG:i:2	NM:i:3	MD:Z:26^A77T29	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch2___Lane10_TAGCTT.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_TAGCTT.fastq.gz
+INFO	2020-08-13 10:51:28	MarkDuplicates	Read 1270880 records. 0 pairs never matched.
+INFO	2020-08-13 10:51:30	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2905324216; totalMemory: 3911188480; maxMemory: 28631367680
+INFO	2020-08-13 10:51:30	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+Chromosomal sequence could not be extracted for	NB551646:41:HHG37BGXB:1:13302:14092:15416_1:N:0:TAATGCGC+GCCTCTAT	chrM	1
+Chromosomal sequence could not be extracted for	NB551646:41:HHG37BGXB:1:13308:22344:19702_1:N:0:TAATGCGC+GCCTCTAT	chrLambda	48372
+INFO	2020-08-13 10:52:42	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-13 10:52:42	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-13 10:52:42	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-13 10:52:44	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3892275056; totalMemory: 11083448320; maxMemory: 28631367680
+INFO	2020-08-13 10:52:44	MarkDuplicates	Marking 301288 records as duplicates.
+INFO	2020-08-13 10:52:44	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-13 10:52:44	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+Chromosomal sequence could not be extracted for	NB551646:41:HHG37BGXB:2:21105:26119:7041_1:N:0:TAATGCGC+GCCTCTAT	chrLambda	48370
+INFO	2020-08-13 10:53:26	MarkDuplicates	Before output close freeMemory: 11535103800; totalMemory: 11578900480; maxMemory: 28631367680
+Chromosomal sequence could not be extracted for	NB551646:41:HHG37BGXB:2:23305:11682:15528_1:N:0:TAATGCGC+GCCTCTAT	chrLambda	48368
+INFO	2020-08-13 10:53:26	MarkDuplicates	After output close freeMemory: 11451741056; totalMemory: 11495538688; maxMemory: 28631367680
+[Thu Aug 13 10:53:26 EDT 2020] picard.sam.markduplicates.MarkDuplicates done. Elapsed time: 2.31 minutes.
+Runtime.totalMemory()=11495538688
+Removed duplicate reads for cell  Batch1___Lane01_CAGATC 
+Filtering nonconversion reads  : Batch1___Lane01_CAGATC 
+Processing single-end Bismark output file(s) (SAM format):
+Batch1___Lane01_CAGATC.rmdup.bam
+
+Checking file >>Batch1___Lane01_CAGATC.rmdup.bam<< for signs of file truncation...
+
+
+Trying to determine the type of mapping from the SAM header line
+Treating file as single-end data (extracted from @PG line)
+Treating file as single-end data (extracted from @PG line)
+
+Using a threshold of >> 3 << methylation calls in non-CG context before a read gets removed
+
+NON-CONVERSION SUMMARY
+======================
+Analysed sequences (single-end) in file >> Batch1___Lane01_CAGATC.rmdup.bam << in total:	969592
+Sequences removed because of apparent non-bisulfite conversion (at least 3 consecutive non-CG calls per read):	64130 (6.6%)
+
+Please continue with deduplication or methylation extraction now (depending on your application)
+
+filter_non_conversion completed in 0d 0h 1m 42s
+
+Non-conversion filtering is successful for cell  Batch1___Lane01_CAGATC 
+[main_samview] region "chrlambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "Lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "lambda" specifies an unknown reference name. Continue anyway.
+[main_samview] region "L" specifies an unknown reference name. Continue anyway.
+Chromosomal sequence could not be extracted for	NB551646:41:HHG37BGXB:2:22303:5746:8983_1:N:0:TAATGCGC+GCCTCTAT	chrLambda	48370
+Lambda control split is successful for cell  Batch1___Lane01_CAGATC 
+Type: EXEC 
+** fastq_file:  Batch2___Lane10_TGACCA.fastq.gz 
+[1] "align_cell"
+ -- fastq_file:  Batch2___Lane10_TGACCA.fastq.gz 
+Aligning  Batch2___Lane10_TGACCA.fastq.gz 
+[1] "bismark --bowtie2  --pbat -D 15 -R 2 -L 20 -N 0 --score_min L,0,-0.2  --fastq   --basename Batch2___Lane10_TGACCA --bam /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/  /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_TGACCA.fastq.gz > /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//logs//alignment//bismark_aligner/Batch2___Lane10_TGACCA.fastq.gz.log"
+Path to Bowtie 2 specified as: bowtie2
+Bowtie seems to be working fine (tested command 'bowtie2 --version' [2.2.3])
+Output format is BAM (default)
+Alignments will be written out in BAM format. Samtools found here: '/mnt/isilon/tan_lab/uzuny/programs/scATAC_Pipeline/installation/samtools-1.9/samtools'
+Reference genome folder provided is /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies//reference_genome/hg38_plus_lambda/chroms/	(absolute path is '/mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/)'
+
+Input files to be analysed (in current folder '/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments'):
+/mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_TGACCA.fastq.gz
+Library was specified as PBAT-Seq (Post-Bisulfite Adapter Tagging), only performing alignments to the complementary strands (CTOT and CTOB)
+Setting parallelization to single-threaded (default)
+
+Current working directory is: /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example/working_dir/alignments
+
+Now reading in and storing sequence information of the genome specified in: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/
+
+Processed 1000000 sequences so far
+Single-core mode: setting pid to 1
+
+Single-end alignments will be performed
+=======================================
+
+Input file is in FastQ format
+Writing a G -> A converted version of the input file Batch2___Lane10_TGACCA.fastq.gz to Batch2___Lane10_TGACCA.fastq.gz_G_to_A.fastq
+
+Created G -> A converted version of the FastQ file Batch2___Lane10_TGACCA.fastq.gz (999957 sequences in total)
+
+Input file is Batch2___Lane10_TGACCA.fastq.gz_G_to_A.fastq (FastQ)
+
+Now running 2 instances of Bowtie 2 against the bisulfite genome of /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/ with the specified options: -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals
+
+Now starting the Bowtie 2 aligner for GAreadCTgenome (reading in sequences from Batch2___Lane10_TGACCA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --nofw)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/CT_conversion/BS_CT
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:19492:1054_1:N:0:TAATGCGC+NCCTCTAT	4	*	0	0	*	*	0	0	AATTAATATCCTTATAATAAAAAAAAAAACAAAAAAACATACACATAAAAAAAAAACAATTAAAAAAAAATTAAAATAATACATTTACAATACAAAAAACATANAAAATTACTAATCAACTCTAAAACCTAAAA	EEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEAEEEEEEE/AE6E/EEEEAEEAEA<A/EAE/EEE6EEE/AEEEE/AAEE//EEE<////E<EE//</<<//#/EA/<E///<///A////<<///E<AE</E	YT:Z:UU
+Now starting the Bowtie 2 aligner for GAreadGAgenome (reading in sequences from Batch2___Lane10_TGACCA.fastq.gz_G_to_A.fastq with options -q -N 0 -L 20 -D 15 -R 2 --score-min L,0,-0.2 --ignore-quals --norc)
+Using Bowtie 2 index: /mnt/isilon/tan_lab/uzuny/projects/jamboree/package/dependencies/reference_genome/hg38_plus_lambda/chroms/Bisulfite_Genome/GA_conversion/BS_GA
+
+Found first alignment:	NB551646:41:HHG37BGXB:1:11101:19492:1054_1:N:0:TAATGCGC+NCCTCTAT	0	chr4_GA_converted	13898292	0	134M	*	0	0	AATTAATATCCTTATAATAAAAAAAAAAACAAAAAAACATACACATAAAAAAAAAACAATTAAAAAAAAATTAAAATAATACATTTACAATACAAAAAACATANAAAATTACTAATCAACTCTAAAACCTAAAA	EEEEEEEEEAEEEEEEEEEEEEEEEEEEEEEEAEEEEEEE/AE6E/EEEEAEEAEA<A/EAE/EEE6EEE/AEEEE/AAEE//EEE<////E<EE//</<<//#/EA/<E///<///A////<<///E<AE</E	AS:i:-19	XN:i:0	XM:i:4	XO:i:0	XG:i:0	NM:i:4	MD:Z:45C56C0A14T15	YT:Z:UU
+
+>>> Writing bisulfite mapping results to Batch2___Lane10_TGACCA.bam <<<
+
+
+Reading in the sequence file /mnt/isilon/tan_lab/uzuny/projects/jamboree/data/example//working_dir//trimmed_fastq/Batch2___Lane10_TGACCA.fastq.gz
+Processed 1000000 sequences so far
+Chromosomal sequence could not be extracted for	NB551646:41:HHG37BGXB:1:23309:14329:4789_1:N:0:TAATGCGC+GCCTCTAT	chrM	1
+Chromosomal sequence could not be extracted for	NB551646:41:HHG37BGXB:2:21204:13456:1325_1:N:0:TAATGCGC+GCCTCTAT	chrM	16436
+Processed 1000000 sequences so far
+Chromosomal sequence could not be extracted for	NB551646:41:HHG37BGXB:4:23410:19668:2302_1:N:0:TAATGCGC+GCCTCTAT	chrM	1
+Processed 1000000 sequences so far
+1285604 reads; of these:
+  1285604 (100.00%) were unpaired; of these:
+    801730 (62.36%) aligned 0 times
+    414444 (32.24%) aligned exactly 1 time
+    69430 (5.40%) aligned >1 times
+37.64% overall alignment rate
+1285604 reads; of these:
+  1285604 (100.00%) were unpaired; of these:
+    800759 (62.29%) aligned 0 times
+    413352 (32.15%) aligned exactly 1 time
+    71493 (5.56%) aligned >1 times
+37.71% overall alignment rate
+
+Successfully deleted the temporary file Batch2___Lane10_ATCACG.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	1285604
+Number of alignments with a unique best hit from the different alignments:	834058
+Mapping efficiency:	64.9%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	22910457
+
+Total methylated C's in CpG context:	629182
+Total methylated C's in CHG context:	125671
+Total methylated C's in CHH context:	434698
+Total methylated C's in Unknown context:	196
+
+Total unmethylated C's in CpG context:	1406573
+Total unmethylated C's in CHG context:	4930041
+Total unmethylated C's in CHH context:	15384292
+Total unmethylated C's in Unknown context:	7417
+
+C methylated in CpG context:	30.9%
+C methylated in CHG context:	2.5%
+C methylated in CHH context:	2.7%
+C methylated in Unknown context (CN or CHN):	2.6%
+
+
+Bismark completed in 0d 0h 32m 5s
+
+====================
+Bismark run complete
+====================
+
+1412250 reads; of these:
+  1412250 (100.00%) were unpaired; of these:
+    828542 (58.67%) aligned 0 times
+    506806 (35.89%) aligned exactly 1 time
+    76902 (5.45%) aligned >1 times
+41.33% overall alignment rate
+1412250 reads; of these:
+  1412250 (100.00%) were unpaired; of these:
+    825053 (58.42%) aligned 0 times
+    507932 (35.97%) aligned exactly 1 time
+    79265 (5.61%) aligned >1 times
+41.58% overall alignment rate
+
+Successfully deleted the temporary file Batch2___Lane10_ACTTGA.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	1412250
+Number of alignments with a unique best hit from the different alignments:	1019525
+Mapping efficiency:	72.2%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	28070356
+
+Total methylated C's in CpG context:	918559
+Total methylated C's in CHG context:	25236
+Total methylated C's in CHH context:	75152
+Total methylated C's in Unknown context:	164
+
+Total unmethylated C's in CpG context:	1036483
+Total unmethylated C's in CHG context:	6157116
+Total unmethylated C's in CHH context:	19857810
+Total unmethylated C's in Unknown context:	9450
+
+C methylated in CpG context:	47.0%
+C methylated in CHG context:	0.4%
+C methylated in CHH context:	0.4%
+C methylated in Unknown context (CN or CHN):	1.7%
+
+
+Bismark completed in 0d 0h 38m 19s
+
+====================
+Bismark run complete
+====================
+
+Read filtering is successful for cell  Batch2___Lane10_ATCACG 
+Using  picard  to remove duplicates...[Thu Aug 13 11:07:23 EDT 2020] picard.sam.SortSam INPUT=Batch2___Lane10_ATCACG.mapq_filtered.bam OUTPUT=Batch2___Lane10_ATCACG.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 11:07:23 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 11:07:33	SortSam	Finished reading inputs, merging and writing to output now.
+1053956 reads; of these:
+  1053956 (100.00%) were unpaired; of these:
+    644254 (61.13%) aligned 0 times
+    352796 (33.47%) aligned exactly 1 time
+    56906 (5.40%) aligned >1 times
+38.87% overall alignment rate
+1053956 reads; of these:
+  1053956 (100.00%) were unpaired; of these:
+    642223 (60.93%) aligned 0 times
+    354076 (33.59%) aligned exactly 1 time
+    57657 (5.47%) aligned >1 times
+39.07% overall alignment rate
+
+Successfully deleted the temporary file Batch2___Lane10_CGATGT.fastq.gz_G_to_A.fastq
+
+Final Alignment report
+======================
+Sequences analysed in total:	1053956
+Number of alignments with a unique best hit from the different alignments:	710443
+Mapping efficiency:	67.4%
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	19874503
+
+Total methylated C's in CpG context:	651999
+Total methylated C's in CHG context:	19981
+Total methylated C's in CHH context:	60731
+Total methylated C's in Unknown context:	156
+
+Total unmethylated C's in CpG context:	811281
+Total unmethylated C's in CHG context:	4417427
+Total unmethylated C's in CHH context:	13913084
+Total unmethylated C's in Unknown context:	6564
+
+C methylated in CpG context:	44.6%
+C methylated in CHG context:	0.5%
+C methylated in CHH context:	0.4%
+C methylated in Unknown context (CN or CHN):	2.3%
+
+
+Bismark completed in 0d 0h 28m 51s
+
+====================
+Bismark run complete
+====================
+
+[Thu Aug 13 11:07:55 EDT 2020] picard.sam.SortSam done. Elapsed time: 0.54 minutes.
+Runtime.totalMemory()=2595749888
+Sorted alignments for cell  Batch2___Lane10_ATCACG 
+[Thu Aug 13 11:07:55 EDT 2020] picard.sam.markduplicates.MarkDuplicates INPUT=[Batch2___Lane10_ATCACG.sorted.bam] OUTPUT=Batch2___Lane10_ATCACG.rmdup.bam METRICS_FILE=Batch2___Lane10_ATCACG.picard_metrics.txt REMOVE_DUPLICATES=true    MAX_SEQUENCES_FOR_DISK_READ_ENDS_MAP=50000 MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=8000 SORTING_COLLECTION_SIZE_RATIO=0.25 REMOVE_SEQUENCING_DUPLICATES=false TAGGING_POLICY=DontTag ASSUME_SORTED=false DUPLICATE_SCORING_STRATEGY=SUM_OF_BASE_QUALITIES PROGRAM_RECORD_ID=MarkDuplicates PROGRAM_GROUP_NAME=MarkDuplicates READ_NAME_REGEX=<optimized capture of last three ':' separated fields as numeric values> OPTICAL_DUPLICATE_PIXEL_DISTANCE=100 VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 11:07:55 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 11:07:56	MarkDuplicates	Start of doWork freeMemory: 2045986008; totalMemory: 2058354688; maxMemory: 28631367680
+INFO	2020-08-13 11:07:56	MarkDuplicates	Reading input file and constructing read end information.
+INFO	2020-08-13 11:07:56	MarkDuplicates	Will retain up to 110120644 data points before spilling to disk.
+WARNING	2020-08-13 11:07:56	AbstractOpticalDuplicateFinderCommandLineProgram	A field field parsed out of a read name was expected to contain an integer and did not. Read name: NB551646:41:HHG37BGXB:1:12308:26453:15335_1:N:0:TAATGCGC+GCCTCTAT. Cause: String 'TAATGCGC+GCCTCTAT' did not start with a parsable number.
+INFO	2020-08-13 11:08:06	MarkDuplicates	Read 766986 records. 0 pairs never matched.
+Read filtering is successful for cell  Batch2___Lane10_ACTTGA 
+Using  picard  to remove duplicates...[Thu Aug 13 11:08:07 EDT 2020] picard.sam.SortSam INPUT=Batch2___Lane10_ACTTGA.mapq_filtered.bam OUTPUT=Batch2___Lane10_ACTTGA.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 11:08:07 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
+INFO	2020-08-13 11:08:07	MarkDuplicates	After buildSortedReadEndLists freeMemory: 2408536864; totalMemory: 3366977536; maxMemory: 28631367680
+INFO	2020-08-13 11:08:07	MarkDuplicates	Will retain up to 894730240 duplicate indices before spilling to disk.
+INFO	2020-08-13 11:08:12	MarkDuplicates	Traversing read pair information and detecting duplicates.
+INFO	2020-08-13 11:08:12	MarkDuplicates	Traversing fragment information and detecting duplicates.
+INFO	2020-08-13 11:08:12	MarkDuplicates	Sorting list of duplicate records.
+INFO	2020-08-13 11:08:14	MarkDuplicates	After generateDuplicateIndexes freeMemory: 3326701480; totalMemory: 10506731520; maxMemory: 28631367680
+INFO	2020-08-13 11:08:14	MarkDuplicates	Marking 250133 records as duplicates.
+INFO	2020-08-13 11:08:14	MarkDuplicates	Found 0 optical duplicate clusters.
+INFO	2020-08-13 11:08:14	MarkDuplicates	Reads are assumed to be ordered by: coordinate
+INFO	2020-08-13 11:08:19	SortSam	Finished reading inputs, merging and writing to output now.
+Read filtering is successful for cell  Batch2___Lane10_CGATGT 
+Using  picard  to remove duplicates...[Thu Aug 13 11:08:26 EDT 2020] picard.sam.SortSam INPUT=Batch2___Lane10_CGATGT.mapq_filtered.bam OUTPUT=Batch2___Lane10_CGATGT.sorted.bam SORT_ORDER=coordinate    VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json
+[Thu Aug 13 11:08:26 EDT 2020] Executing as uzuny@m-4-04 on Linux 3.10.0-514.2.2.el7.x86_64 amd64; Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01; Picard version: 2.5.0(2c370988aefe41f579920c8a6a678a201c5261c1_1466708365)
