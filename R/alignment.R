@@ -2,6 +2,7 @@ library(doSNOW)
 library(vioplot)
 library(readr)
 library(Rsamtools)
+library(ShortRead)
 
 
 align_sample <- function(read_dir,
