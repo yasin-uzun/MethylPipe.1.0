@@ -42,7 +42,7 @@ compute_umap <- function(pca, num_dims = 10)
 {
   pca_input = pca[, 1:num_dims]
   set.seed(123)
-  umap_object = umap(pca_input)
+  umap_object = umap::umap(pca_input)
 
   return(umap_object$layout)
 }
@@ -176,9 +176,12 @@ plot_feature <- function(dim_red, feature_matrix = NULL,
 
 
 
-reduce_dims_for_sample <- function(met_mat_for_dim_red, met_mat_for_features,
-                                   name_for_dim_red, name_for_features,
-                                   methylation_calls_dir, plot_dir,
+reduce_dims_for_sample <- function(met_mat_for_dim_red,
+                                   met_mat_for_features,
+                                   name_for_dim_red,
+                                   name_for_features,
+                                   methylation_calls_dir,
+                                   plot_dir,
                                    methylation_type = 'CpG',
                                    min_call_count_threshold = 10,
                                    features = NULL)

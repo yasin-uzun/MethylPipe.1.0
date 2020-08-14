@@ -191,6 +191,7 @@ count_fastq_reads <- function(fastq_dir)
 
   cl <- makeCluster(num_cores, outfile="", type = 'SOCK')
   registerDoSNOW(cl)
+  clusterExport(cl, varlist = ls(), envir = environment())
   #read_counts = c()
   line_counts_list = foreach(i=1:length(fastq_files), .export = ls(globalenv())) %dopar%
   {

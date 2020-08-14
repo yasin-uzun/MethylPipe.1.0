@@ -1,5 +1,5 @@
 
-call_methylation_sites_for_sample <- function(alignment_dir, methylation_calls_dir, log_dir)
+call_methylation_sites_for_sample <- function(alignment_dir, methylation_calls_dir, log_dir, bme_param_settings)
 {
   dir.create(methylation_calls_dir, showWarnings = F, recursive = T)
   setwd(alignment_dir)
@@ -17,7 +17,9 @@ call_methylation_sites_for_sample <- function(alignment_dir, methylation_calls_d
 
       call_methylation_sites_for_cell(alignment_dir = alignment_dir,
                                       methylation_calls_dir = methylation_calls_dir,
-                                      cell_id = cell_id, log_dir = log_dir)
+                                      cell_id = cell_id,
+                                      bme_param_settings = bme_param_settings,
+                                      log_dir = log_dir)
 
     }#foreach
   }else#if(num_cores > 1)
@@ -35,7 +37,7 @@ call_methylation_sites_for_sample <- function(alignment_dir, methylation_calls_d
 
 }
 
-call_methylation_sites_for_cell <- function(alignment_dir, methylation_calls_dir, cell_id, log_dir)
+call_methylation_sites_for_cell <- function(alignment_dir, methylation_calls_dir, cell_id, bme_param_settings, log_dir)
 {
   setwd(alignment_dir)
 
@@ -51,12 +53,12 @@ call_methylation_sites_for_cell <- function(alignment_dir, methylation_calls_dir
   sys_command = paste0('bismark_methylation_extractor ',bme_param_settings, ' ',
                        lambda_file,' --output  ', methylation_calls_dir, '/'
                        , ' > ', log_file)
-  #command_result_1 = system(sys_command)
+  command_result_1 = system(sys_command)
 
   sys_command = paste0('bismark_methylation_extractor ',bme_param_settings, ' ',
                        organism_file,' --output  ', methylation_calls_dir, '/'
                        , ' >> ', log_file)
-  #command_result_2 = system(sys_command)
+  command_result_2 = system(sys_command)
 
   #Convert to bismark cov format (Only for organism, not for lambda control)
   setwd(methylation_calls_dir)
@@ -64,7 +66,7 @@ call_methylation_sites_for_cell <- function(alignment_dir, methylation_calls_dir
   sink(log_file, append = T)
 
   sys_command = paste0('bismark2bedGraph -o CpG_calls.',cell_id,'.organism ', 'CpG_context_',cell_id,'.organism.txt.gz')
-  #command_result_3 = system(sys_command)
+  command_result_3 = system(sys_command)
 
 
   if(file.exists(paste0('Non_CpG_context_',cell_id,'.organism.txt.gz')))
@@ -92,7 +94,7 @@ call_methylation_sites_for_cell <- function(alignment_dir, methylation_calls_dir
 
   sink()
 
-  command_result = command_result_1 + command_result_2 + command_result_3 + command_result_4
+  command_result = command_result_1 + command_result_2 + command_result_3
 
 
   if(command_result == 0)
@@ -278,7 +280,7 @@ plot_split_reports <- function(df_org_split_reports, df_lambda_split_reports, li
 
   #Methylation rate
   met_CpG = parse_number(df_org_split_reports$C.methylated.in.CpG.context)
-  met_CH = parse_number(df_org_split_reports$C.methylated.in.non.CpG.context)
+  #met_CH = parse_number(df_org_split_reports$C.methylated.in.non.CpG.context)
 
 
   roof = max(unlist(pcts_met))

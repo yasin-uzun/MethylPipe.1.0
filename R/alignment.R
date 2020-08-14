@@ -635,7 +635,9 @@ plot_alignment_stats <- function(sample_name, df_alignment_stats, coverage_rates
 
     ###Scatter plot filtering
     filter_aln_rate =   parse_number(df_alignment_stats$Alignment_rate) > alignment_rate_threshold
-    filter_read_count = df_alignment_stats$organism_read_counts > filtered_read_count_threshold
+    #filter_read_count = df_alignment_stats$organism_read_counts > organism_minimum_filtered_read_count
+    filter_read_count = df_alignment_stats$nc_filtered_read_counts > minimum_filtered_read_count
+
     passing = filter_aln_rate &  filter_read_count
 
 
@@ -657,7 +659,7 @@ plot_alignment_stats <- function(sample_name, df_alignment_stats, coverage_rates
            pch = 20, col = 'red')
 
     abline(v = alignment_rate_threshold, lty = 2)
-    abline(h = filtered_read_count_threshold/ 1000000 + 0.01, lty = 2)
+    abline(h = minimum_filtered_read_count/ 1000000 + 0.01, lty = 2)
 
     #Filtering pie chart
     cnt_failed_low_aln = sum(!filter_aln_rate & filter_read_count)
@@ -704,6 +706,7 @@ count_bam_files <- function(alignment_dir)
    #t2 = Sys.time()
    #print(t2-t1)
 
+   library(ShortRead)
 
    print('Counting mapq filtered bam files')
    df_mapq_read_counts = mcsapply(mapq_files, FUN = countBam, mc.cores = num_cores)
@@ -777,10 +780,13 @@ compute_coverage_rates <- function(alignment_dir)
    base_counts = c()
 
    cl <- makeCluster(num_cores, outfile="", type = 'SOCK')
+   clusterExport(cl, varlist = ls(), envir = environment())
    registerDoSNOW(cl)
+   clusterExport(cl, varlist = ls(), envir = environment())
+
    base_counts = foreach(i=1:length(bam_files), .export= ls(globalenv()) ) %dopar%
    {
-     #library(Rsamtools)
+     library(Rsamtools)
      print(i)
      bam_file = bam_files[i]
      res <- pileup(bam_file, scanBamParam=sbp, pileupParam=p_param)

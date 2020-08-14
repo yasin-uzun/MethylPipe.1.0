@@ -11,7 +11,7 @@ read_region_annot <- function(region_annot_file, format_file, type_filtering =  
     dim(df_region_annot)
     #df_region_annot %>% distinct(region_name, .keep_all = TRUE)
 
-    df_region_annot <- distinct(df_region_annot, region_name, .keep_all = TRUE)
+    df_region_annot <- dplyr::distinct(df_region_annot, region_name, .keep_all = TRUE)
     dim(df_region_annot)
     head(df_region_annot)
     length(unique(df_region_annot$region_name))
