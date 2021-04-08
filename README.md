@@ -42,7 +42,7 @@ You can install these tools by yourself. For convenience, we provide the binarie
 
 You can download demultiplex_fastq.pl script from [here](https://chopri.box.com/s/vplpxht3r7u6i0fcnio803wlnezuc5o3).
 
-You also need genomic sequence and annotated genomic regions for quantification of methylation calls. We provide the sequence data for hg38 assembly in [here](https://chopri.box.com/s/rf6fk2gumtbe3au83msxniwnkzkukvr5).
+You also need genomic sequence and annotated genomic regions for quantification of methylation calls. We provide the sequence data for hg38 assembly [here](https://chopri.box.com/s/ajbbqsu3vqumygqu8uzqex5m7afpniwr) and the sequence annotation in [here](https://chopri.box.com/s/rf6fk2gumtbe3au83msxniwnkzkukvr5) for download.
 
 ## Configuration
 
