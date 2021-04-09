@@ -16,7 +16,7 @@ install.packages("vioplot")
 Then type the following commands in R command prompt:
 ```R
 library(devtools)
-install_github("yasin-uzun/SINBAD.1.0")
+install_github("yasin-uzun/SINBAD.0.1")
 ```
 Once you have installed the SINBAD: A pipeline for processing SINgle cell Bisulfite sequencing samples and Analysis of Data
  package, verify that it is installed correctly as follows:
