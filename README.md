@@ -4,6 +4,8 @@ SINBAD is an R package for processing single cell DNA methylation data. It accep
 
 SINBAD is currently a Beta version under testing and development. Not all functionalities are implemented at the moment and is being updated.
 
+NOTE: SINBAD 0.1 is tested on single ended snmC-Seq data.
+
 ## System requirements
 R 3.6.0 or later version is required for installation.  
 
